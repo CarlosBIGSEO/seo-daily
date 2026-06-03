@@ -1,0 +1,7 @@
+# Herramientas internas del generador (no se publican)
+_generator/
+
+# Sistema
+Thumbs.db
+.DS_Store
+desktop.ini
