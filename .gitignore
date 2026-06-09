@@ -1,5 +1,7 @@
-# Herramientas internas del generador (no se publican)
-_generator/
+# Del generador: publicamos template.html y prompt.md (los usa el workflow en la nube),
+# pero NO los logs ni los backups locales.
+_generator/logs/
+_generator/index.manual-backup.html
 
 # Sistema
 Thumbs.db

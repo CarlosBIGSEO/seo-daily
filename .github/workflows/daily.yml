@@ -1,0 +1,72 @@
+name: SEO Daily
+
+# Se ejecuta en los servidores de GitHub (no necesita tu PC).
+on:
+  schedule:
+    # 05:00 UTC ≈ 07:00 en horario de verano (CEST) / 06:00 en invierno (CET).
+    - cron: '0 5 * * *'
+  workflow_dispatch: {}   # permite lanzarlo a mano desde la pestaña Actions
+
+permissions:
+  contents: write          # para poder hacer commit + push del informe
+
+concurrency:
+  group: seo-daily
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del repo
+        uses: actions/checkout@v4
+
+      - name: Instalar Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Instalar Claude Code CLI
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: Preparar el prompt con la fecha (Europe/Madrid)
+        run: |
+          set -euo pipefail
+          export TZ=Europe/Madrid
+          dias=(domingo lunes martes miércoles jueves viernes sábado)
+          meses=(enero febrero marzo abril mayo junio julio agosto septiembre octubre noviembre diciembre)
+          ISO=$(date +%Y-%m-%d)
+          D=$(date +%-d); MI=$(date +%-m); W=$(date +%w); Y=$(date +%Y); HM=$(date +%H:%M)
+          LONG="${dias[$W]}, $D de ${meses[$((MI-1))]} de $Y"
+          echo "TODAY_ISO=$ISO" >> "$GITHUB_ENV"
+          cp _generator/prompt.md /tmp/prompt.md
+          LONG="$LONG" ISO="$ISO" HM="$HM" perl -0pi -e 's/\{\{TODAY_LONG\}\}/$ENV{LONG}/g; s/\{\{TODAY_ISO\}\}/$ENV{ISO}/g; s/\{\{GEN_TIME\}\}/$ENV{HM}/g' /tmp/prompt.md
+          echo "Prompt preparado para $LONG ($ISO $HM)"
+
+      - name: Generar el informe con Claude
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+        run: |
+          set -euo pipefail
+          claude --print --permission-mode bypassPermissions --model sonnet --add-dir "$PWD" < /tmp/prompt.md
+
+      - name: Verificar que se generó el HTML
+        run: |
+          set -euo pipefail
+          test -f index.html
+          grep -q "$TODAY_ISO" archive/index.html || (echo "No se añadió la entrada de hoy a la hemeroteca"; exit 1)
+          echo "OK: index.html y hemeroteca actualizados."
+
+      - name: Publicar (commit + push)
+        run: |
+          set -euo pipefail
+          git config user.name "SEO Daily Bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Sin cambios que publicar."
+          else
+            git commit -m "SEO Daily: edición ${TODAY_ISO} (nube)"
+            git push
+            echo "Publicado."
+          fi
