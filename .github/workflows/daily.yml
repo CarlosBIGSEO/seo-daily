@@ -3,8 +3,10 @@ name: SEO Daily
 # Se ejecuta en los servidores de GitHub (no necesita tu PC).
 on:
   schedule:
-    # 05:00 UTC ≈ 07:00 en horario de verano (CEST) / 06:00 en invierno (CET).
-    - cron: '0 5 * * *'
+    # 05:23 UTC ≈ 07:23 (verano CEST) / 06:23 (invierno CET).
+    # Minuto "raro" a propósito: los cron en la hora en punto (HH:00) son los que
+    # GitHub más retrasa/salta por congestión. Fuera de hora = mucho más fiable.
+    - cron: '23 5 * * *'
   workflow_dispatch: {}   # permite lanzarlo a mano desde la pestaña Actions
 
 permissions:

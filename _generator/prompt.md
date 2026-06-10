@@ -23,7 +23,7 @@ Prioriza fuentes fiables: Search Engine Land, Search Engine Roundtable, Search E
 2. Sustituye TODOS los tokens (abajo). **No modifiques el CSS ni la estructura**; solo rellena tokens.
 3. Escribe el resultado en `index.html` (sobrescribe).
 4. Copia EXACTAMENTE ese contenido a `archive/{{TODAY_ISO}}.html`.
-5. En `archive/index.html`, inserta JUSTO DESPUÉS del comentario `<!-- NUEVAS EDICIONES SE AÑADEN AQUÍ ARRIBA -->` esta línea (la más reciente queda arriba; NO toques las anteriores):
+5. En `archive/index.html`, añade la entrada de hoy. **Idempotencia**: si YA existe una línea cuyo enlace es `{{TODAY_ISO}}.html` (porque hoy ya se generó antes), NO añadas otra: sustituye esa línea por la nueva. Si no existe, insértala JUSTO DESPUÉS del comentario `<!-- NUEVAS EDICIONES SE AÑADEN AQUÍ ARRIBA -->` (la más reciente queda arriba; NO toques las de otros días). Formato:
    `    <li><a href="{{TODAY_ISO}}.html"><span class="d">{{TODAY_LONG}}</span><span class="t">RESUMEN_BREVE →</span></a></li>`
    (RESUMEN_BREVE = 3-5 palabras clave de los titulares de hoy)
 
