@@ -6,6 +6,7 @@
 <title>SEO Daily · 11 jun 2026</title>
 <style>
   :root{
+    /* TEMA OSCURO (forzado por preferencia) */
     --bg:#101116; --bg-grad:#15161d; --surface:#1a1c24; --surface2:#20222c;
     --ink:#f1f0ee; --ink2:#cdd0da; --muted:#9aa0b0; --line:#2c2f3a; --line2:#363a47;
     --panel:#23262f; --on-panel:#ffffff;
@@ -17,7 +18,8 @@
     --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
     --maxw:1200px;
   }
-  /*
+  /* TEMA CLARO (desactivado). Para volver al modo adaptativo al sistema,
+     descomenta este bloque — ya está como prefers-color-scheme: light:
   @media (prefers-color-scheme: light){
     :root{
       --bg:#f7f5f0; --bg-grad:#efeae0; --surface:#ffffff; --surface2:#fbfaf7;
@@ -135,6 +137,7 @@
   .metric .bar .br-top .v{font-family:var(--serif);font-weight:800;color:var(--ink);flex:0 0 auto}
   .metric .bar .track{height:9px;border-radius:6px;background:var(--surface2);border:1px solid var(--line);overflow:hidden}
   .metric .bar .fill{height:100%;border-radius:6px;background:var(--tech)}
+  /* GRÁFICO DE LÍNEAS */
   .chart{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px 24px 14px;box-shadow:var(--shadow)}
   .chart .ch-head{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;flex-wrap:wrap;margin-bottom:6px}
   .chart .ch-title{font-family:var(--serif);font-size:18px;font-weight:700;color:var(--ink)}
@@ -147,6 +150,7 @@
   .chart .dot{fill:var(--surface);stroke:var(--ia);stroke-width:2.5}
   .chart .vlab{fill:var(--ink);font-size:12px;font-weight:700;font-family:var(--serif)}
   .chart .xlab{fill:var(--muted);font-size:11px}
+  /* SEO POR VERTICAL */
   .vgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
   @media(max-width:820px){.vgrid{grid-template-columns:1fr}}
   .vert{background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--local);border-radius:var(--radius);padding:17px 18px;box-shadow:var(--shadow)}
@@ -221,7 +225,7 @@
       </div>
       <div class="mast-meta">
         <div class="date">jueves, 11 de junio de 2026</div>
-        <div class="edi">Edición automática · 10:29 CET</div>
+        <div class="edi">Edición automática · 19:55 CET</div>
       </div>
     </div>
     <nav class="catnav">
@@ -235,11 +239,11 @@
     <div class="ticker">
       <div class="lbl"><span class="pulse"></span>En portada</div>
       <div class="track"><div class="move" id="tk">
-        <span>🤖 <b>GSC NUEVO</b> informe de impresiones en AI Overviews y AI Mode ya disponible</span>
-        <span>🔴 <b>CORE UPDATE</b> mayo finalizado: sin nuevos sistemas de ranking, 12 días de alta volatilidad</span>
-        <span>💸 <b>PERFORMANCE MAX</b> ya concentra el 45% de todas las conversiones en Google Ads</span>
-        <span>⚙️ <b>MERCHANT CENTER</b> deadline 30-J: mínimo 500×500px y atributo vídeo en fichas de producto</span>
-        <span>🧠 <b>GEO ALERT</b> el solapamiento top Google vs. citas en IA cae al 20%</span>
+        <span>⚙️ <b>GSC INFORMES DE IA</b> opt-out de AI Overviews y AI Mode entra en vigor el 17-J</span>
+        <span>🔴 <b>MAY CORE UPDATE</b> cerrado el 2-J con oleada extra de volatilidad en los rankings</span>
+        <span>🤖 <b>AI MODE 1.000M</b> usuarios mensuales al año del lanzamiento; Gemini 3.5 Flash como nuevo motor</span>
+        <span>💸 <b>PERFORMANCE MAX</b> ya representa el 45% de todas las conversiones en Google Ads</span>
+        <span>📊 <b>GEO</b> solo el 38% de las citas en motores de IA proceden del top-10 orgánico</span>
       </div></div>
     </div>
   </div>
@@ -250,16 +254,16 @@
   <section class="hero">
     <div class="feat">
       <span class="tag">⚡ Lo más importante hoy</span>
-      <h3>Google Search Console estrena el informe de IA generativa: ya mides tu visibilidad en AI Overviews y AI Mode</h3>
-      <p>El 3 de junio Google activó en Search Console el primer informe dedicado a funciones generativas de búsqueda, con impresiones en AI Overviews, AI Mode y Discover IA desglosadas por página, país, dispositivo y fecha hasta nivel horario. Disponible primero en UK, llega sin datos de clics ni CTR. Al mismo tiempo, un toggle de opt-out permite excluir el sitio de todas las respuestas generativas sin penalizar el posicionamiento orgánico clásico.</p>
+      <h3>Search Console estrena informes de IA y toggle de exclusión: tienes hasta el 17-J para decidir</h3>
+      <p>Google desplegó el 3 de junio informes dedicados de impresiones en AI Overviews y AI Mode dentro de Search Console, junto a un interruptor para excluir tu contenido de la búsqueda generativa. La exclusión entra en vigor el 17 de junio y no penaliza el orgánico clásico ni Gemini. Los datos solo están disponibles desde el 18 de mayo, son solo impresiones (sin clics), y el rollout comenzó por Reino Unido.</p>
     </div>
     <div class="side">
       <div class="lab">Por qué te importa</div>
-      <h4>Tres pasos accionables esta semana</h4>
+      <h4>Un toggle que puede cambiar tu visibilidad generativa para siempre</h4>
       <ul>
-        <li>Accede a Search Console → Rendimiento → IA generativa y exporta las URLs con más impresiones: son tus páginas más expuestas en AIO y AI Mode hoy.</li>
-        <li>El opt-out de IA generativa no penaliza en búsqueda orgánica clásica, pero elimina toda visibilidad en AI Overviews, AI Mode y Discover IA de forma inmediata.</li>
-        <li>Sin clics ni CTR aún: cruza las impresiones de IA con GA4 para detectar si esas URLs generan tráfico real o solo "brand exposure" sin visita.</li>
+        <li>Excluirse no baja tu posición en Google Search convencional: solo desapareces de AI Overviews, AI Mode y Discover generativo.</li>
+        <li>La app de Gemini queda fuera del alcance del toggle: tu contenido puede seguir citándose en Gemini aunque actives el opt-out.</li>
+        <li>Antes del 17-J revisa tus impresiones AI en GSC y compáralas con el tráfico orgánico para evaluar el coste real de la exclusión.</li>
       </ul>
     </div>
   </section>
@@ -267,23 +271,23 @@
   <div class="kicker-h"><span class="em">📊</span><h2>El dato del día</h2></div>
   <div class="metric">
     <div class="big">
-      <span class="num">93%</span>
-      <span class="lab">de las sesiones de AI Mode terminan sin ningún clic a sitios externos</span>
-      <span class="trend">▲ Máximo histórico · Semrush Q4 2025</span>
+      <span class="num">2,5B</span>
+      <span class="lab">usuarios mensuales activos de AI Overviews (Google I/O 2026)</span>
+      <span class="trend">▲ AI Mode: 1.000M usuarios en su primer año</span>
     </div>
     <div class="bars">
-      <div class="bar"><div class="br-top"><b>Performance Max · % conversiones Google Ads</b><span class="v">45%</span></div><div class="track"><div class="fill" style="width:45%;background:var(--paid)"></div></div></div>
-      <div class="bar"><div class="br-top"><b>Sites internacionales con errores de hreflang</b><span class="v">75%</span></div><div class="track"><div class="fill" style="width:75%;background:var(--tech)"></div></div></div>
-      <div class="bar"><div class="br-top"><b>GEO · overlap top Google vs. citas en IA</b><span class="v">20%</span></div><div class="track"><div class="fill" style="width:20%;background:var(--geo)"></div></div></div>
-      <div class="bar"><div class="br-top"><b>AI Mode · sesiones sin clic a webs externas</b><span class="v">93%</span></div><div class="track"><div class="fill" style="width:93%;background:var(--ia)"></div></div></div>
+      <div class="bar"><div class="br-top"><b>Performance Max del total de conversiones en Google Ads</b><span class="v">45%</span></div><div class="track"><div class="fill" style="width:45%;background:var(--paid)"></div></div></div>
+      <div class="bar"><div class="br-top"><b>Peso de reseñas en Local Pack (Whitespark 2026)</b><span class="v">20%</span></div><div class="track"><div class="fill" style="width:20%;background:var(--local)"></div></div></div>
+      <div class="bar"><div class="br-top"><b>Citas en IA procedentes del top-10 orgánico</b><span class="v">38%</span></div><div class="track"><div class="fill" style="width:38%;background:var(--geo)"></div></div></div>
+      <div class="bar"><div class="br-top"><b>Sitios internacionales con errores de hreflang</b><span class="v">75%</span></div><div class="track"><div class="fill" style="width:75%;background:var(--tech)"></div></div></div>
     </div>
   </div>
 
   <div class="kicker-h"><span class="em">📈</span><h2>Tendencia del sector</h2></div>
   <div class="chart">
     <div class="ch-head">
-      <div><div class="ch-title">Crecimiento de usuarios de AI Overviews</div><div class="ch-sub">Usuarios activos mensuales (miles de millones) · hitos publicados por Google</div></div>
-      <div class="ch-src">Fuente: Google I/O 2025/2026 · Digiday</div>
+      <div><div class="ch-title">Solapamiento: top-10 orgánico vs. fuentes citadas por IA</div><div class="ch-sub">% de coincidencia entre resultados orgánicos y citas en motores generativos · 2024-2026</div></div>
+      <div class="ch-src">Fuente: Brandlight Research (vía LLMrefs.com)</div>
     </div>
     <div id="linechart" class="ch-canvas"></div>
   </div>
@@ -293,64 +297,73 @@
     <article class="post a-ia">
       <div class="ribbon"></div>
       <div class="body">
-        <div class="cat"><span class="dot"></span>IA &amp; Búsqueda <span class="badge">3 jun</span></div>
-        <h3>GSC estrena el informe de IA generativa con impresiones en AIO y AI Mode, y toggle de opt-out</h3>
-        <p>El 3 de junio Google lanzó en Search Console un informe exclusivo para funciones generativas que muestra impresiones en AI Overviews, AI Mode y Discover IA por página, país, dispositivo y fecha (resolución horaria). Comenzó en UK y se expande globalmente sin fecha confirmada. No incluye clics ni consultas aún. El opt-out excluye de todas las respuestas IA sin afectar el posicionamiento clásico.</p>
-        <div class="src">Fuente: <a href="https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports" target="_blank" rel="noopener">Google Search Central</a></div>
+        <div class="cat"><span class="dot"></span>IA &amp; Búsqueda <span class="badge">17-J</span></div>
+        <h3>GSC estrena informes de IA y toggle de exclusión con efecto desde el 17 de junio</h3>
+        <p>Google lanzó el 3 de junio informes de impresiones en AI Overviews y AI Mode en Search Console, junto a un toggle de opt-out. Sin impacto en el orgánico clásico; la app de Gemini queda fuera del alcance. Datos disponibles solo desde el 18 de mayo, sin clics.</p>
+        <div class="src">Fuente: <a href="https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports" target="_blank" rel="noopener">Google Search Central Blog</a></div>
       </div>
     </article>
     <article class="post a-algo">
       <div class="ribbon"></div>
       <div class="body">
-        <div class="cat"><span class="dot"></span>Algoritmo <span class="badge">Finalizado</span></div>
-        <h3>May 2026 Core Update cerrado tras 12 días: sin nuevos sistemas de ranking, guías de calidad como hoja de ruta</h3>
-        <p>El broad core update de mayo, iniciado el 21 de mayo, terminó de desplegarse el 2 de junio con 12 días de alta volatilidad. Google no introdujo nuevos sistemas de ranking y remite únicamente a sus guías de contenido útil como hoja de ruta para la recuperación. La volatilidad afectó rankings en todos los nichos y regiones.</p>
-        <div class="src">Fuente: <a href="https://www.seroundtable.com/google-may-2026-core-update-done-41435.html" target="_blank" rel="noopener">Search Engine Roundtable</a></div>
+        <div class="cat"><span class="dot"></span>Algoritmo <span class="badge">Completado</span></div>
+        <h3>May 2026 Core Update cierra el 2-J con oleada extra de volatilidad en rankings</h3>
+        <p>El segundo core update de 2026 finalizó el 2 de junio tras 12 días de rollout, marcando en rojo Semrush Sensor y Mozcast el 23-M, el 30-M y las últimas 24 horas. Solo seis semanas separaron este update del de marzo, un ritmo inusualmente rápido.</p>
+        <div class="src">Fuente: <a href="https://www.seroundtable.com/google-may-core-update-volatility-41434.html" target="_blank" rel="noopener">Search Engine Roundtable</a></div>
       </div>
     </article>
     <article class="post a-ia">
       <div class="ribbon"></div>
       <div class="body">
         <div class="cat"><span class="dot"></span>IA &amp; Búsqueda <span class="badge">Dato</span></div>
-        <h3>AI Mode supera 1.000 millones de usuarios con Gemini 3.5 Flash: las queries se doblan cada trimestre</h3>
-        <p>Google I/O 2026 confirmó que AI Mode ha alcanzado 1.000 millones de usuarios mensuales en menos de un año desde su lanzamiento. El modelo pasa a Gemini 3.5 Flash como default global. AI Overviews ya llega a 2.500 millones de usuarios al mes y el ingreso de búsqueda de Google creció un 19% interanual en Q1 2026.</p>
-        <div class="src">Fuente: <a href="https://blog.google/products-and-platforms/products/search/search-io-2026/" target="_blank" rel="noopener">Google Blog I/O 2026</a></div>
+        <h3>AI Mode supera 1.000M de usuarios y Gemini 3.5 Flash pasa a ser el motor por defecto</h3>
+        <p>Un año después de su debut en Google I/O 2025, AI Mode supera los 1.000 millones de usuarios mensuales con consultas que se han más que duplicado cada trimestre. Gemini 3.5 Flash sustituye al modelo anterior en todos los países.</p>
+        <div class="src">Fuente: <a href="https://blog.google/products-and-platforms/products/search/search-io-2026/" target="_blank" rel="noopener">Google I/O 2026 Blog</a></div>
       </div>
     </article>
     <article class="post a-paid">
       <div class="ribbon"></div>
       <div class="body">
         <div class="cat"><span class="dot"></span>Paid / PPC <span class="badge">Dato</span></div>
-        <h3>Performance Max genera el 45% de conversiones Google Ads y estrena experimentos de assets con IA</h3>
-        <p>Performance Max consolida su dominio con el 45% de las conversiones totales en Google Ads en 2026. Google lanza asset experiments que permiten testear grupos creativos completos —incluidos assets generados con Asset Studio— frente a los activos actuales. Waze Ads ya está integrado en PMax para campañas con objetivo de visita a tienda en EE. UU.</p>
-        <div class="src">Fuente: <a href="https://searchengineland.com/google-adds-new-performance-max-asset-testing-tools-479667" target="_blank" rel="noopener">Search Engine Land</a></div>
+        <h3>Performance Max representa ya el 45% de todas las conversiones de Google Ads</h3>
+        <p>PMax se consolida como el canal dominante de la plataforma. Las últimas mejoras incluyen la integración de Waze Ads para campañas de tienda física en EE. UU. y nuevas opciones de exclusión de audiencias para mayor control de la inversión.</p>
+        <div class="src">Fuente: <a href="https://www.digitalapplied.com/blog/google-ads-performance-max-2026-campaign-guide" target="_blank" rel="noopener">Digital Applied</a></div>
+      </div>
+    </article>
+    <article class="post a-tech">
+      <div class="ribbon"></div>
+      <div class="body">
+        <div class="cat"><span class="dot"></span>SEO Técnico</div>
+        <h3>Core Web Vitals 2.0 añade Visual Stability Index (VSI): mide estabilidad en toda la sesión</h3>
+        <p>Google incorporó el VSI en 2026 para medir la estabilidad visual durante toda la sesión, no solo en la carga inicial. El umbral de INP sigue en &lt;200ms y el 40% de sitios que pasaban FID no lo cumplen según datos del informe CWV de GSC.</p>
+        <div class="src">Fuente: <a href="https://seocom.agency/en/blog/core-web-vitals-2026-inp/" target="_blank" rel="noopener">SEOCOM</a></div>
       </div>
     </article>
     <article class="post a-geo">
       <div class="ribbon"></div>
       <div class="body">
         <div class="cat"><span class="dot"></span>GEO <span class="badge">Dato</span></div>
-        <h3>El solapamiento entre el top Google y las fuentes citadas por IA cae del 70% al 20%</h3>
-        <p>Según datos de Brandlight citados en guías de GEO 2026, la coincidencia entre los primeros resultados de Google y las fuentes que los sistemas de IA citan en sus respuestas ha pasado del 70% a menos del 20%. El gap sigue creciendo a medida que los LLMs desarrollan sus propias preferencias de citación, independientes del PageRank clásico.</p>
-        <div class="src">Fuente: <a href="https://llmrefs.com/generative-engine-optimization" target="_blank" rel="noopener">LLMrefs · GEO Guide 2026</a></div>
-      </div>
-    </article>
-    <article class="post a-tech">
-      <div class="ribbon"></div>
-      <div class="body">
-        <div class="cat"><span class="dot"></span>SEO Técnico <span class="badge">30 jun</span></div>
-        <h3>Merchant Center: el 30-J sube el mínimo de imagen a 500×500px y activa el atributo vídeo</h3>
-        <p>A partir del 30 de junio, Google Merchant Center exigirá imágenes de producto de mínimo 500×500 píxeles en todas las categorías y métodos de marketing. Al mismo tiempo, los vídeos enviados vía el atributo video_link pasarán a ser elegibles para mostrar en fichas de producto en Shopping, tanto en anuncios como en listados orgánicos.</p>
-        <div class="src">Fuente: <a href="https://support.google.com/merchants/answer/16989427?hl=en" target="_blank" rel="noopener">Google Merchant Center Help</a></div>
+        <h3>El solapamiento entre top-10 orgánico y fuentes citadas por IA cae del 70% a menos del 20%</h3>
+        <p>Según Brandlight Research, el porcentaje de coincidencia entre los primeros resultados de Google y las fuentes citadas por motores generativos ha pasado del 70% a menos del 20% en dos años. Solo el 38% de las citas en IA proceden del top-10 orgánico.</p>
+        <div class="src">Fuente: <a href="https://llmrefs.com/generative-engine-optimization" target="_blank" rel="noopener">LLMrefs (Brandlight Research)</a></div>
       </div>
     </article>
     <article class="post a-tools">
       <div class="ribbon"></div>
       <div class="body">
         <div class="cat"><span class="dot"></span>Herramientas</div>
-        <h3>Ahrefs evoluciona a plataforma de marketing IA con Brand Radar para monitorizar menciones en LLMs</h3>
-        <p>La última iteración de Ahrefs va más allá del SEO técnico con Brand Radar (monitorización de menciones en IA y web), Web Analytics propio sin cookies, herramientas de SEO local y escritura con IA integrada. La suite apunta a sustituir varios stacks en un solo producto, con el GEO como diferenciador clave frente a competidores.</p>
-        <div class="src">Fuente: <a href="https://techsy.io/en/blog/best-seo-tools-2026" target="_blank" rel="noopener">TECHSY · Best SEO Tools 2026</a></div>
+        <h3>Ahrefs y Semrush estrenan servidores MCP para integrar datos SEO en agentes de IA</h3>
+        <p>Ambas herramientas han lanzado servidores Model Context Protocol (MCP) que permiten a agentes de IA consultar backlinks, rankings y auditorías técnicas mediante lenguaje natural, abriendo la puerta a flujos de análisis SEO completamente automatizados.</p>
+        <div class="src">Fuente: <a href="https://techsy.io/en/blog/best-seo-tools-2026" target="_blank" rel="noopener">TECHSY</a></div>
+      </div>
+    </article>
+    <article class="post a-tech">
+      <div class="ribbon"></div>
+      <div class="body">
+        <div class="cat"><span class="dot"></span>E-commerce / Técnico <span class="badge">30 jun</span></div>
+        <h3>Merchant Center activa el 30-J el atributo video_link: los vídeos de producto llegan a Shopping</h3>
+        <p>A partir del 30 de junio de 2026, los vídeos enviados mediante video_link empezarán a servirse en Shopping y Google activará la validación de errores de políticas. Las imágenes deben superar 500×500 px; enforcement desde el 31 de enero de 2027.</p>
+        <div class="src">Fuente: <a href="https://support.google.com/merchants/answer/16989427?hl=en" target="_blank" rel="noopener">Google Merchant Center Help</a></div>
       </div>
     </article>
   </div>
@@ -360,49 +373,48 @@
     <div class="vert v-local">
       <div class="vh"><div class="vi">🏪</div><h3>SEO Local</h3><span class="cnt">2</span></div>
       <ul>
-        <li><p class="vt">GBP concentra 8 de los 10 factores principales de ranking en Local Pack; sus señales representan el 32% del peso total según Whitespark 2026</p><span class="vsrc"><a href="https://www.sterlingsky.ca/google-local-changes/" target="_blank" rel="noopener">Sterling Sky · Whitespark</a></span></li>
-        <li><p class="vt">Las reseñas escalan del 16% al 20% en el ranking de factores locales: la velocidad de recepción importa tanto como el volumen total acumulado</p><span class="vsrc"><a href="https://www.forumspeaks.com/google-reviews-local-seo-2026/" target="_blank" rel="noopener">Forum Speaks</a></span></li>
+        <li><p class="vt">Las reseñas alcanzan el 20% del peso de ranking en el Local Pack según Whitespark 2026, subiendo desde el 16% de 2023</p><span class="vsrc"><a href="https://www.sterlingsky.ca/google-local-changes/" target="_blank" rel="noopener">Sterling Sky</a></span></li>
+        <li><p class="vt">Perfiles GBP completos reciben 70% más visitas y aparecen 18 veces más en búsquedas; fotos, FAQs y descripción son factores críticos</p><span class="vsrc"><a href="https://almcorp.com/blog/google-maps-seo/" target="_blank" rel="noopener">ALM Corp</a></span></li>
       </ul>
     </div>
     <div class="vert v-ecom">
-      <div class="vh"><div class="vi">🛒</div><h3>E-commerce</h3><span class="cnt">2</span></div>
+      <div class="vh"><div class="vi">🛒</div><h3>E-commerce</h3><span class="cnt">1</span></div>
       <ul>
-        <li><p class="vt">Merchant Center eleva el mínimo de image_link a 500×500px en todas las categorías y activa video_link el 30 de junio</p><span class="vsrc"><a href="https://support.google.com/merchants/answer/16989427?hl=en" target="_blank" rel="noopener">Google Merchant Center</a></span></li>
-        <li><p class="vt">Schema de producto y feed deben sincronizar precio, stock e identificadores: las discrepancias bloquean rich results y Shopping orgánico</p><span class="vsrc"><a href="https://almcorp.com/blog/google-merchant-center-product-data-specification-update-2026/" target="_blank" rel="noopener">ALM Corp</a></span></li>
+        <li><p class="vt">Merchant Center: el 30 de junio los vídeos de producto (video_link) empiezan a servirse en Shopping; desde esa fecha Google valida errores de políticas y calidad</p><span class="vsrc"><a href="https://support.google.com/merchants/answer/16989427?hl=en" target="_blank" rel="noopener">Google Merchant Center</a></span></li>
       </ul>
     </div>
     <div class="vert v-intl">
       <div class="vh"><div class="vi">🌍</div><h3>SEO Internacional</h3><span class="cnt">1</span></div>
       <ul>
-        <li><p class="vt">El 75% de los sitios con presencia internacional tiene errores en hreflang; los fallos más habituales son anotaciones sin self-referencing y códigos ISO incorrectos</p><span class="vsrc"><a href="https://www.digitalapplied.com/blog/international-seo-2026-hreflang-multilingual-guide" target="_blank" rel="noopener">Digital Applied</a></span></li>
+        <li><p class="vt">El 75% de sitios internacionales tiene errores en hreflang que fragmentan el ranking entre países; corregir self-reference, simetría y códigos ISO ya es ventaja competitiva</p><span class="vsrc"><a href="https://www.digitalapplied.com/blog/international-seo-2026-hreflang-multilingual-guide" target="_blank" rel="noopener">Digital Applied</a></span></li>
       </ul>
     </div>
   </div>
 
   <div class="kicker-h"><span class="em">🗓️</span><h2>En el radar · próximos cambios con fecha</h2></div>
   <div class="agenda">
+    <div class="ag-item a-ia">
+      <div class="ag-date"><span class="d">17</span><span class="m">jun</span></div>
+      <div class="ag-card">
+        <div class="ag-cat">IA &amp; Búsqueda</div>
+        <h3>Opt-out de AI Overviews y AI Mode entra en vigor</h3>
+        <p>El toggle de exclusión anunciado el 3-J en Search Console comienza a aplicarse. Sitios que lo activen dejan de aparecer en AI Overviews, AI Mode y Discover generativo; el posicionamiento orgánico clásico no se ve afectado. Gemini app excluida del alcance.</p>
+      </div>
+    </div>
     <div class="ag-item a-tech">
       <div class="ag-date"><span class="d">30</span><span class="m">jun</span></div>
       <div class="ag-card">
-        <div class="ag-cat">SEO Técnico · E-commerce</div>
-        <h3>Merchant Center: imágenes mínimo 500×500px y vídeo elegible en fichas de producto</h3>
-        <p>A partir del 30 de junio Google aplica el nuevo mínimo de imagen para todas las categorías y activa el atributo video_link para fichas en Google Shopping. Afecta a feeds de anuncios de pago y listados orgánicos por igual. Quedan menos de 3 semanas.</p>
+        <div class="ag-cat">E-commerce / Técnico</div>
+        <h3>Merchant Center: video_link empieza a servirse en Google Shopping</h3>
+        <p>Los vídeos de producto enviados mediante el atributo video_link serán elegibles para mostrarse en Shopping y Google activará la validación de errores de políticas y calidad desde esta fecha.</p>
       </div>
     </div>
-    <div class="ag-item a-ia">
-      <div class="ag-date"><span class="d">~</span><span class="m">jul</span></div>
+    <div class="ag-item a-tech">
+      <div class="ag-date"><span class="d">31</span><span class="m">ene '27</span></div>
       <div class="ag-card">
-        <div class="ag-cat">IA &amp; Búsqueda</div>
-        <h3>Informes de IA generativa en GSC se expanden a todos los publishers globalmente</h3>
-        <p>El nuevo informe de AI Overviews y AI Mode en Search Console, disponible desde el 3 de junio para un subconjunto en UK, se ampliará a todos los propietarios de sitios en los próximos meses. Google no ha dado fecha concreta para la expansión global.</p>
-      </div>
-    </div>
-    <div class="ag-item a-paid">
-      <div class="ag-date"><span class="d">~</span><span class="m">jun</span></div>
-      <div class="ag-card">
-        <div class="ag-cat">Paid / PPC</div>
-        <h3>Performance Max: asset experiments completan su despliegue global a todos los anunciantes</h3>
-        <p>Google está terminando el rollout de los experimentos de assets para PMax, que permiten comparar grupos creativos completos y assets generados con IA en Asset Studio. La funcionalidad llega a todas las cuentas en las próximas semanas.</p>
+        <div class="ag-cat">E-commerce / Técnico</div>
+        <h3>Merchant Center: enforcement del mínimo 500×500 px en imágenes de producto</h3>
+        <p>Después de advertencias desde abril de 2026, Google comenzará a desaprobar productos con imágenes por debajo de 500×500 píxeles. Las imágenes optimizadas automáticamente por Google no requerirán acción del merchant.</p>
       </div>
     </div>
   </div>
@@ -410,71 +422,71 @@
   <div class="kicker-h" id="herramientas"><span class="em">🛠️</span><h2>Stack &amp; herramientas recomendadas</h2></div>
   <div class="grid2 sec-tools">
     <article class="tcard">
-      <div class="top"><div class="ico">🔍</div><h3>Google Search Console</h3><span class="pill">Gratis</span></div>
-      <p>El nuevo informe de IA generativa aporta impresiones en AI Overviews, AI Mode y Discover IA por página, país, dispositivo y fecha. Disponible para publishers en UK con expansión global próxima.</p>
-      <div class="use"><b>Caso de uso:</b> identifica qué páginas generan más impresiones en IA y compáralas con las de mayor tráfico clásico para detectar gaps de citabilidad GEO. <a href="https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports" target="_blank" rel="noopener">Más info →</a></div>
+      <div class="top"><div class="ico">🔍</div><h3>Search Console</h3><span class="pill">Gratis</span></div>
+      <p>Estrena informes dedicados de impresiones en AI Overviews y AI Mode (datos desde el 18-M). La nueva pestaña "Búsqueda de IA" permite evaluar tu visibilidad generativa antes de tomar la decisión del opt-out del 17-J.</p>
+      <div class="use"><b>Caso de uso:</b> comparar impresiones AI vs. orgánicas por página y modelar el impacto de la exclusión antes de activarla. <a href="https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports" target="_blank" rel="noopener">Más info →</a></div>
     </article>
     <article class="tcard">
-      <div class="top"><div class="ico">🐸</div><h3>Screaming Frog SEO Spider</h3><span class="pill">£199/año</span></div>
-      <p>Herramienta de referencia para auditorías técnicas profundas en 2026: detecta hreflang inconsistente, schema roto, canonical errors y páginas con CWV problemáticos cuando se combina con datos de GSC.</p>
-      <div class="use"><b>Caso de uso:</b> audita todos los atributos hreflang de un site internacional para detectar el 75% de errores habituales antes del próximo rediseño. <a href="https://www.screamingfrog.co.uk/seo-spider/" target="_blank" rel="noopener">Más info →</a></div>
+      <div class="top"><div class="ico">🔗</div><h3>Ahrefs</h3><span class="pill">MCP</span></div>
+      <p>Lanzó servidor MCP (Model Context Protocol) que permite a agentes de IA consultar backlinks, rankings, brechas de keywords y auditorías técnicas mediante lenguaje natural desde herramientas como Claude o ChatGPT.</p>
+      <div class="use"><b>Caso de uso:</b> conectar un agente de IA al workspace de Ahrefs para generar briefings de contenido y análisis de competidores de forma automatizada. <a href="https://techsy.io/en/blog/best-seo-tools-2026" target="_blank" rel="noopener">Más info →</a></div>
     </article>
     <article class="tcard">
-      <div class="top"><div class="ico">📊</div><h3>Semrush · AI Visibility</h3><span class="pill">Desde $139/mes</span></div>
-      <p>Semrush documentó en Q4 2025 que el 92-94% de sesiones en AI Mode no generan clic a ningún sitio externo. Su módulo de seguimiento de AI Overviews permite ver qué keywords disparan respuestas generativas con tu dominio citado.</p>
-      <div class="use"><b>Caso de uso:</b> activa el tracking de AI Overviews en Position Tracking para monitorizar si tu dominio aparece citado en las respuestas generativas de tus keywords clave.</div>
+      <div class="top"><div class="ico">📊</div><h3>Semrush Sensor</h3><span class="pill">Volatilidad</span></div>
+      <p>Referencia para monitorizar la volatilidad post-core update. Con el cierre del May Core Update el 2-J, las métricas siguen elevadas en nichos YMYL; el Sensor avisa cuándo el algoritmo se estabiliza por categoría.</p>
+      <div class="use"><b>Caso de uso:</b> configurar alertas diarias para detectar nuevas oleadas antes de que aparezcan en los rankings de clientes y anticipar la comunicación.</div>
     </article>
     <article class="tcard">
-      <div class="top"><div class="ico">🔭</div><h3>Ahrefs · Brand Radar</h3><span class="pill">AI Platform</span></div>
-      <p>La nueva capa Brand Radar monitoriza menciones de tu marca en respuestas de ChatGPT, Perplexity y Gemini además de en la web tradicional, clave cuando el solapamiento Google/IA ya es solo del 20%.</p>
-      <div class="use"><b>Caso de uso:</b> compara la frecuencia de cita de tu marca en LLMs con la de tus competidores para detectar si necesitas una estrategia GEO independiente del SEO clásico.</div>
+      <div class="top"><div class="ico">🕷️</div><h3>Screaming Frog</h3><span class="pill">Técnico</span></div>
+      <p>Imprescindible para auditar INP y CLS integrando la API de PageSpeed Insights por URL. Con CWV 2.0 y la nueva métrica VSI, es el momento de re-crawlear con las reglas actualizadas.</p>
+      <div class="use"><b>Caso de uso:</b> crawl segmentado de páginas de categoría con INP &gt;200ms para priorizarlas en el siguiente sprint técnico. <a href="https://www.screamingfrog.co.uk/seo-spider/" target="_blank" rel="noopener">Más info →</a></div>
     </article>
   </div>
 
   <div class="kicker-h"><span class="em">🤖</span><h2>IA aplicada al SEO · ideas e integraciones</h2></div>
   <div class="grid2 sec-ia">
     <article class="tcard">
-      <div class="top"><div class="ico">🤖</div><h3>GSC AI → auditoría de gap GEO</h3><span class="pill">IA + Datos</span></div>
-      <p>Combina el nuevo informe de IA generativa de GSC con comprobaciones en ChatGPT y Perplexity para identificar qué páginas con alta visibilidad en AIO no aparecen citadas en otros LLMs: eso es tu gap GEO urgente.</p>
-      <div class="use"><b>Cómo aplicarlo:</b> exporta el informe GSC → importa URLs en hoja de cálculo → comprueba cada una con un prompt relevante en ChatGPT y Perplexity → prioriza las que no aparecen.</div>
+      <div class="top"><div class="ico">🤖</div><h3>Agentes IA + MCP SEO</h3><span class="pill">Tendencia</span></div>
+      <p>Conecta los servidores MCP de Ahrefs y Semrush a un agente de IA para automatizar análisis de brechas de contenido, auditorías de backlinks y briefings sin salir del contexto conversacional.</p>
+      <div class="use"><b>Cómo aplicarlo:</b> configura un agente que consuma el MCP de Ahrefs y genere cada lunes un resumen de oportunidades de keywords para cada cliente de agencia.</div>
     </article>
     <article class="tcard">
-      <div class="top"><div class="ico">🧠</div><h3>Reescritura BLUF para citabilidad en IA</h3><span class="pill">GEO</span></div>
-      <p>Los sistemas de IA prefieren contenido con respuesta directa al principio (Bottom Line Up Front), estadísticas con fuente y estructuras tipo FAQ o tabla comparativa. Usa Claude o GPT-4o para reescribir las introducciones de tus páginas top.</p>
-      <div class="use"><b>Cómo aplicarlo:</b> pide al LLM que evalúe si el artículo responde en las dos primeras frases la intención principal y que sugiera un dato estadístico con fuente para reforzar la citabilidad.</div>
+      <div class="top"><div class="ico">📈</div><h3>Modela el impacto del opt-out IA</h3><span class="pill">Urgente</span></div>
+      <p>Usa los datos del nuevo informe GSC AI Overviews para estimar cuántas impresiones generativas obtienes y si generan tráfico real. Un script Python con IA puede cruzar esos datos con GA4 en minutos.</p>
+      <div class="use"><b>Cómo aplicarlo:</b> exporta el informe de GSC AI, cruza con GA4 mediante un agente y decide antes del 17-J. <a href="https://pikaseo.com/articles/google-search-console-ai-performance-reports-2026" target="_blank" rel="noopener">Guía →</a></div>
     </article>
     <article class="tcard">
-      <div class="top"><div class="ico">⚙️</div><h3>Validación masiva de schema JSON-LD con IA</h3><span class="pill">Técnico</span></div>
-      <p>Extrae todos los bloques JSON-LD de tu site con Screaming Frog y pásalos a la API de un LLM para detectar discrepancias con el feed de Merchant Center en precio, disponibilidad e identificadores de producto.</p>
-      <div class="use"><b>Cómo aplicarlo:</b> exporta JSON-LD con SF → script Python con la API de Claude para comparar con el feed CSV → genera un informe de discrepancias para el equipo técnico en minutos.</div>
+      <div class="top"><div class="ico">🧠</div><h3>GEO: contenido optimizado para citas en LLMs</h3><span class="pill">GEO</span></div>
+      <p>Solo el 38% de las citas en IA vienen del top-10 orgánico. La estrategia GEO prioriza densidad de entidades, datos estructurados semánticos y cobertura editorial externa para ser citado en ChatGPT, Perplexity y AI Overviews.</p>
+      <div class="use"><b>Cómo aplicarlo:</b> audita tus páginas pilares con una herramienta GEO para identificar qué entidades faltan vs. competidores citados. <a href="https://llmrefs.com/generative-engine-optimization" target="_blank" rel="noopener">Más info →</a></div>
     </article>
     <article class="tcard">
-      <div class="top"><div class="ico">📈</div><h3>Análisis de asset experiments en Performance Max</h3><span class="pill">PPC</span></div>
-      <p>Los nuevos asset experiments de PMax permiten A/B testear creatividades generadas por IA frente a activos manuales. Usa Python o Claude para analizar los datos exportados y detectar patrones de rendimiento superior.</p>
-      <div class="use"><b>Cómo aplicarlo:</b> lanza un experimento comparando assets de Asset Studio vs. tus creatividades actuales → tras 14 días exporta resultados → pide a Claude que identifique los 3 patrones de mayor CTR.</div>
+      <div class="top"><div class="ico">⚡</div><h3>Alertas de volatilidad con IA</h3><span class="pill">Automatización</span></div>
+      <p>Combina el feed de Semrush Sensor con un LLM para generar resúmenes automáticos de volatilidad cuando se supere un umbral y enviarlos al equipo por Slack antes de que los clientes lo noten.</p>
+      <div class="use"><b>Cómo aplicarlo:</b> webhook de Semrush Sensor → función serverless → Claude API → notificación con análisis de qué nichos han movido más esa semana.</div>
     </article>
   </div>
 
   <div class="kicker-h"><span class="em">⚡</span><h2>Quick wins · ideas de optimización</h2></div>
   <div class="grid2 sec-opt">
     <article class="tcard">
-      <div class="top"><div class="ico">🛒</div><h3>Actualiza imágenes de producto: 500×500px antes del 30-J</h3></div>
-      <p>Merchant Center aplica el nuevo mínimo el 30 de junio. Productos con imágenes inferiores a 500×500px perderán elegibilidad en Shopping y anuncios de producto: audita y reemplaza el feed ahora.</p>
+      <div class="top"><div class="ico">🎥</div><h3>Añade video_link al feed de Merchant Center</h3></div>
+      <p>A partir del 30 de junio los vídeos de producto empiezan a servirse en Google Shopping. Preparar el atributo ahora te da ventaja frente a competidores que lo descubran después del plazo.</p>
       <div class="tags"><span class="t hi">Impacto alto</span><span class="t low">Esfuerzo bajo</span></div>
     </article>
     <article class="tcard">
-      <div class="top"><div class="ico">⚡</div><h3>Elimina scripts de terceros bloqueantes para mejorar INP</h3></div>
-      <p>INP es el Core Web Vital más frecuentemente suspendido en 2026. Audita con Chrome DevTools qué scripts de analytics, ads o chat disparan interacciones lentas y aplica lazy load o defer selectivo.</p>
+      <div class="top"><div class="ico">⚙️</div><h3>Audita el Visual Stability Index (VSI)</h3></div>
+      <p>Con CWV 2.0, el VSI mide la estabilidad visual durante toda la sesión. Sitios con elementos que se mueven tras la carga inicial verán caer esta métrica aunque tengan buen CLS en la primera carga.</p>
       <div class="tags"><span class="t hi">Impacto alto</span><span class="t mid">Esfuerzo medio</span></div>
     </article>
     <article class="tcard">
-      <div class="top"><div class="ico">🌍</div><h3>Audita hreflang con Screaming Frog y corrige anotaciones recíprocas</h3></div>
-      <p>El 75% de los sitios internacionales tiene errores de hreflang. El problema más habitual son anotaciones sin self-referencing o sin el par recíproco en la versión de destino: Screaming Frog lo detecta en un solo rastreo.</p>
-      <div class="tags"><span class="t mid">Impacto medio</span><span class="t low">Esfuerzo bajo</span></div>
+      <div class="top"><div class="ico">🌍</div><h3>Corrige errores de hreflang con Screaming Frog</h3></div>
+      <p>El 75% de sitios internacionales tiene errores de hreflang. Crawlear y corregir self-reference, simetría y códigos ISO puede desbloquearte rankings en mercados donde está posicionando la versión incorrecta.</p>
+      <div class="tags"><span class="t hi">Impacto alto</span><span class="t low">Esfuerzo bajo</span></div>
     </article>
     <article class="tcard">
-      <div class="top"><div class="ico">📝</div><h3>Añade datos con fuente en el primer tercio de tus páginas top</h3></div>
-      <p>Los LLMs priorizan contenido con estadísticas verificables y citas de expertos. Elige las 10 páginas con mayor potencial GEO y añade al menos un dato numérico con fuente en el inicio del artículo.</p>
+      <div class="top"><div class="ico">🏪</div><h3>Completa tu Google Business Profile</h3></div>
+      <p>Perfiles GBP completos reciben 70% más visitas y aparecen 18 veces más en búsquedas. Fotos, horarios, FAQs y descripción son la palanca local con mejor ratio impacto/esfuerzo.</p>
       <div class="tags"><span class="t hi">Impacto alto</span><span class="t low">Esfuerzo bajo</span></div>
     </article>
   </div>
@@ -482,20 +494,20 @@
   <div class="kicker-h"><span class="em">💡</span><h2>Consejos del día</h2></div>
   <div class="tips">
     <ul>
-      <li><span class="n">1</span><div><b>Activa el informe de IA generativa en GSC esta semana.</b> Si tienes acceso (UK primero), ve a Rendimiento → IA generativa y exporta las URLs con más impresiones: son tu mapa de visibilidad en AIO y AI Mode hoy.</div></li>
-      <li><span class="n">2</span><div><b>No uses el opt-out de AIO sin análisis previo.</b> Excluirte elimina toda visibilidad generativa de forma inmediata, pero el 93% de sesiones de AI Mode ya terminan sin clic: valora si el "brand exposure" tiene valor para tu modelo de negocio antes de activarlo.</div></li>
-      <li><span class="n">3</span><div><b>Prepara el feed de Merchant Center antes del 30-J.</b> Quedan menos de 3 semanas: audita las imágenes de producto (mínimo 500×500px) y sube vídeos vía video_link para aparecer en las nuevas fichas de Shopping desde el primer día.</div></li>
-      <li><span class="n">4</span><div><b>Adapta tu contenido para ser citado, no solo para rankear.</b> Estructura BLUF, estadísticas con fuente y tablas comparativas son los patrones que los LLMs prefieren; el top 10 de Google ya solo coincide un 20% con las fuentes citadas por IA.</div></li>
-      <li><span class="n">5</span><div><b>Revisa INP en las páginas de mayor tráfico con datos de campo.</b> Usa PageSpeed Insights con datos de campo (no laboratorio) para detectar interacciones lentas por scripts de terceros o componentes JS no optimizados: es el CWV más difícil de pasar en 2026.</div></li>
+      <li><span class="n">1</span><div><b>Revisa tu informe AI en GSC esta semana.</b> Tienes hasta el 17 de junio para evaluar tus impresiones en AI Overviews y AI Mode antes de que el opt-out entre en vigor. Es la decisión SEO más urgente del mes.</div></li>
+      <li><span class="n">2</span><div><b>Audita INP: el 40% de sitios que pasaban FID no superan los 200ms.</b> La transición sigue dejando sitios técnicamente rotos que su propietario cree que pasan los CWV. Usa Lighthouse y el informe de GSC para confirmarlo.</div></li>
+      <li><span class="n">3</span><div><b>Valida coherencia entre schema y feed de Merchant Center.</b> Google cruza ambas fuentes; discrepancias en precio, disponibilidad o GTIN generan desaprobaciones y reducen visibilidad en Shopping y en el orgánico.</div></li>
+      <li><span class="n">4</span><div><b>Gana citas en IA con earned media, no solo con contenido propio.</b> Los motores generativos priorizan fuentes de terceros. Conseguir menciones en medios especializados y estudios citables es la estrategia GEO de mayor impacto según datos de Brandlight.</div></li>
+      <li><span class="n">5</span><div><b>No esperes recuperarte entre updates: el rebote llega con el siguiente core.</b> Tras el cierre del May Core Update los ajustes continúan. La mayor recuperación histórica llega con el siguiente update, no semanas después.</div></li>
     </ul>
   </div>
 
   <div class="team">
     <h3>📌 Para el equipo · acción de la semana</h3>
     <div class="items">
-      <div class="it"><div class="num">01</div><p><b>Revisar el informe de IA generativa en GSC.</b> Si el equipo tiene acceso (UK primero), exportar las páginas con más impresiones en AI Overviews y AI Mode esta semana y comparar con las de mayor tráfico orgánico: la brecha define prioridades GEO del siguiente sprint.</p></div>
-      <div class="it"><div class="num">02</div><p><b>Auditar el feed de Merchant Center antes del 30-J.</b> Verificar que todas las imágenes de producto cumplen el mínimo de 500×500px y preparar vídeos de producto para el atributo video_link que pasa a ser elegible ese mismo día en Google Shopping.</p></div>
-      <div class="it"><div class="num">03</div><p><b>Ejecutar auditoría GEO en el top 10 de páginas.</b> Comprobar cuáles aparecen citadas en ChatGPT, Perplexity y AI Mode; contrastar con el top 10 orgánico. El gap entre ambas listas define las páginas que más necesitan optimización para citabilidad en IA.</p></div>
+      <div class="it"><div class="num">01</div><p><b>Decisión opt-out IA antes del 17-J.</b> Accede a GSC &gt; Búsqueda de IA, revisa impresiones por página, cruza con Analytics y decide si activar la exclusión de AI Overviews y AI Mode para tu dominio o los de tus clientes.</p></div>
+      <div class="it"><div class="num">02</div><p><b>Feed de Merchant Center con video_link antes del 30-J.</b> Identifica los 10-20 productos estrella, adapta o graba vídeos cortos (&lt;30s) y añade el atributo video_link al feed para ganar presencia en Shopping desde el primer día de activación.</p></div>
+      <div class="it"><div class="num">03</div><p><b>Auditoría GEO en páginas pilares.</b> Identifica los 5 temas clave de cada cliente, analiza qué fuentes citan ChatGPT y Perplexity en esas queries y detecta los gaps de entidades, cobertura externa y datos estructurados que impiden aparecer en respuestas generativas.</p></div>
     </div>
   </div>
 
@@ -506,12 +518,13 @@
     </div>
     <div class="srclist">
       <a href="https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports" target="_blank" rel="noopener">Google Search Central</a>
-      <a href="https://www.seroundtable.com/google-may-2026-core-update-done-41435.html" target="_blank" rel="noopener">Search Engine Roundtable</a>
-      <a href="https://searchengineland.com/google-adds-new-performance-max-asset-testing-tools-479667" target="_blank" rel="noopener">Search Engine Land</a>
-      <a href="https://blog.google/products-and-platforms/products/search/search-io-2026/" target="_blank" rel="noopener">Google Blog I/O 2026</a>
+      <a href="https://www.seroundtable.com/google-may-core-update-volatility-41434.html" target="_blank" rel="noopener">Search Engine Roundtable</a>
+      <a href="https://blog.google/products-and-platforms/products/search/search-io-2026/" target="_blank" rel="noopener">Google I/O 2026</a>
+      <a href="https://llmrefs.com/generative-engine-optimization" target="_blank" rel="noopener">LLMrefs (GEO)</a>
       <a href="https://support.google.com/merchants/answer/16989427?hl=en" target="_blank" rel="noopener">Google Merchant Center</a>
-      <a href="https://llmrefs.com/generative-engine-optimization" target="_blank" rel="noopener">LLMrefs · GEO 2026</a>
-      <a href="https://digiday.com/media/googles-ai-overviews-reach-over-2-billion-monthly-users/" target="_blank" rel="noopener">Digiday</a>
+      <a href="https://www.sterlingsky.ca/google-local-changes/" target="_blank" rel="noopener">Sterling Sky Local SEO</a>
+      <a href="https://pikaseo.com/articles/google-search-console-ai-performance-reports-2026" target="_blank" rel="noopener">Pikaseo</a>
+      <a href="https://seocom.agency/en/blog/core-web-vitals-2026-inp/" target="_blank" rel="noopener">SEOCOM</a>
     </div>
   </footer>
 
@@ -519,8 +532,8 @@
 <script>(function(){var m=document.getElementById('tk');if(m){m.innerHTML+=m.innerHTML;}})();</script>
 <script>
 (function(){
-  var data; try { data = [["oct '24",1],["may '25",2],["may '26",2.5]]; } catch(e){ data = []; }
-  var unit = "B";
+  var data; try { data = [["2024",70],["2026",19]]; } catch(e){ data = []; }
+  var unit = "%";
   var host = document.getElementById('linechart');
   if(!host) return;
   if(!Array.isArray(data) || data.length < 2){ host.innerHTML = '<div style="color:var(--muted);font-size:13px;padding:12px 0">Hoy no hay una serie de datos verificable que graficar.</div>'; return; }
