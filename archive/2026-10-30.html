@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEO Daily · 30 oct 2026</title>
+<style>
+  :root{
+    /* TEMA OSCURO (forzado por preferencia) */
+    --bg:#101116; --bg-grad:#15161d; --surface:#1a1c24; --surface2:#20222c;
+    --ink:#f1f0ee; --ink2:#cdd0da; --muted:#9aa0b0; --line:#2c2f3a; --line2:#363a47;
+    --panel:#23262f; --on-panel:#ffffff;
+    --algo:#ff4d2e; --ia:#00b3a4; --paid:#f5a300; --tech:#1f7aec; --tools:#7c5cff; --geo:#ff3d8b; --opt:#1fae6b;
+    --local:#fd7e14; --ecom:#9c36b5; --intl:#1098ad;
+    --hero1:#1f7aec; --hero2:#7c5cff;
+    --radius:14px; --shadow:0 8px 26px rgba(0,0,0,.40); --shadow-lg:0 20px 50px rgba(0,0,0,.5);
+    --serif:"Iowan Old Style","Palatino Linotype",Palatino,Cambria,Georgia,"Times New Roman",serif;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --maxw:1200px;
+  }
+  /* TEMA CLARO (desactivado). Para volver al modo adaptativo al sistema,
+     descomenta este bloque — ya está como prefers-color-scheme: light:
+  @media (prefers-color-scheme: light){
+    :root{
+      --bg:#f7f5f0; --bg-grad:#efeae0; --surface:#ffffff; --surface2:#fbfaf7;
+      --ink:#16161d; --ink2:#3a3a4a; --muted:#6b6b7b; --line:#e5e0d6; --line2:#d8d2c6;
+      --panel:#16161d; --on-panel:#ffffff;
+      --shadow:0 6px 22px rgba(40,40,70,.10); --shadow-lg:0 18px 48px rgba(40,40,70,.16);
+    }
+  }
+  */
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;color-scheme:dark}
+  body{margin:0;background:
+      radial-gradient(900px 420px at 88% -8%,color-mix(in srgb,var(--tools) 16%,transparent),transparent 60%),
+      radial-gradient(800px 400px at 5% 0%,color-mix(in srgb,var(--tech) 12%,transparent),transparent 55%),
+      linear-gradient(180deg,var(--bg-grad),var(--bg) 240px);
+    color:var(--ink);font-family:var(--sans);line-height:1.55;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  .topstripe{height:5px;background:linear-gradient(90deg,var(--algo),var(--paid),var(--opt),var(--ia),var(--tech),var(--tools),var(--geo))}
+  header.masthead{padding:22px 0 0}
+  .mast-row{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;flex-wrap:wrap;border-bottom:3px solid var(--ink);padding-bottom:14px}
+  .wordmark{display:flex;align-items:center;gap:13px}
+  .wordmark .mk{width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,var(--hero1),var(--hero2));display:grid;place-items:center;color:#fff;font-weight:800;font-size:24px;box-shadow:var(--shadow);font-family:var(--serif)}
+  .wordmark h1{font-family:var(--serif);font-size:34px;margin:0;letter-spacing:-.5px;line-height:1}
+  .wordmark .sub{display:block;font-family:var(--sans);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-top:4px;font-weight:600}
+  .mast-meta{text-align:right;font-size:13px;color:var(--muted)}
+  .mast-meta .date{font-family:var(--serif);font-style:italic;font-size:17px;color:var(--ink2);text-transform:capitalize}
+  .mast-meta .edi{margin-top:2px;letter-spacing:.05em}
+  .catnav{display:flex;gap:8px;flex-wrap:wrap;padding:13px 0 0}
+  .catnav a{font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:5px 11px;border-radius:999px;border:1.5px solid var(--line2);color:var(--ink2);transition:.15s}
+  .catnav a:hover{color:#fff;transform:translateY(-1px)}
+  .catnav a.algo:hover{background:var(--algo);border-color:var(--algo)}
+  .catnav a.ia:hover{background:var(--ia);border-color:var(--ia)}
+  .catnav a.paid:hover{background:var(--paid);border-color:var(--paid);color:#3a2a00}
+  .catnav a.tech:hover{background:var(--tech);border-color:var(--tech)}
+  .catnav a.tools:hover{background:var(--tools);border-color:var(--tools)}
+  .catnav a.geo:hover{background:var(--geo);border-color:var(--geo)}
+  .ticker{margin-top:16px;display:flex;align-items:center;background:var(--panel);color:var(--on-panel);border-radius:10px;overflow:hidden;box-shadow:var(--shadow)}
+  .ticker .lbl{flex:0 0 auto;background:var(--algo);color:#fff;font-weight:800;font-size:12px;letter-spacing:.1em;padding:9px 14px;text-transform:uppercase;display:flex;align-items:center;gap:7px}
+  .ticker .lbl .pulse{width:8px;height:8px;border-radius:50%;background:#fff;animation:pulse 1.4s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+  .ticker .track{overflow:hidden;flex:1}
+  .ticker .move{display:inline-flex;gap:34px;white-space:nowrap;padding:9px 20px;font-size:13.5px;animation:scroll 34s linear infinite}
+  .ticker .move b{color:var(--paid)}
+  .ticker:hover .move{animation-play-state:paused}
+  @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  @media (prefers-reduced-motion:reduce){.ticker .move{animation:none}.ticker .pulse{animation:none}}
+  .kicker-h{display:flex;align-items:center;gap:12px;margin:40px 0 18px}
+  .kicker-h h2{font-family:var(--serif);font-size:23px;margin:0;letter-spacing:-.3px}
+  .kicker-h .em{font-size:22px}
+  .kicker-h::after{content:"";flex:1;height:2px;background:linear-gradient(90deg,var(--line2),transparent)}
+  .hero{display:grid;grid-template-columns:1.55fr 1fr;gap:0;margin-top:24px;border-radius:18px;overflow:hidden;box-shadow:var(--shadow-lg);border:1px solid var(--line)}
+  @media(max-width:820px){.hero{grid-template-columns:1fr}}
+  .hero .feat{background:linear-gradient(150deg,var(--hero1),var(--hero2));color:#fff;padding:30px 32px;position:relative;overflow:hidden}
+  .hero .feat::after{content:"";position:absolute;right:-60px;bottom:-60px;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.18),transparent 70%)}
+  .hero .feat .tag{display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;background:rgba(255,255,255,.18);backdrop-filter:blur(4px);padding:6px 12px;border-radius:999px}
+  .hero .feat h3{font-family:var(--serif);font-size:33px;line-height:1.14;margin:16px 0 12px;letter-spacing:-.6px}
+  .hero .feat p{font-size:16px;margin:0;color:rgba(255,255,255,.94);max-width:46ch}
+  .hero .side{background:var(--surface);padding:26px 26px}
+  .hero .side .lab{font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--algo)}
+  .hero .side h4{font-family:var(--serif);font-size:18px;margin:8px 0 12px;line-height:1.3}
+  .hero .side ul{margin:0;padding:0;list-style:none;display:grid;gap:11px}
+  .hero .side li{display:flex;gap:10px;font-size:14px;color:var(--ink2)}
+  .hero .side li::before{content:"▸";color:var(--tools);font-weight:800}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  @media(max-width:920px){.grid3{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:600px){.grid3{grid-template-columns:1fr}}
+  .post{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:.18s}
+  .post:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+  .post .ribbon{height:6px}
+  .post .body{padding:17px 18px 16px;display:flex;flex-direction:column;flex:1}
+  .post .cat{font-size:10.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;display:inline-flex;align-items:center;gap:7px;margin-bottom:9px}
+  .post .cat .dot{width:8px;height:8px;border-radius:50%}
+  .post .badge{margin-left:auto;font-size:9.5px;font-weight:800;letter-spacing:.06em;color:#fff;padding:2px 8px;border-radius:999px}
+  .post h3{font-family:var(--serif);font-size:18.5px;line-height:1.26;margin:0 0 9px;letter-spacing:-.2px}
+  .post p{font-size:13.5px;color:var(--ink2);margin:0 0 13px}
+  .post .src{margin-top:auto;font-size:11.5px;color:var(--muted);border-top:1px dashed var(--line2);padding-top:10px}
+  .post .src a{color:var(--muted);font-weight:600;border-bottom:1px solid transparent}
+  .post .src a:hover{color:var(--tech);border-color:var(--tech)}
+  .a-algo .ribbon{background:var(--algo)} .a-algo .cat{color:var(--algo)} .a-algo .dot{background:var(--algo)} .a-algo .badge{background:var(--algo)}
+  .a-ia .ribbon{background:var(--ia)} .a-ia .cat{color:var(--ia)} .a-ia .dot{background:var(--ia)} .a-ia .badge{background:var(--ia)}
+  .a-paid .ribbon{background:var(--paid)} .a-paid .cat{color:#b97a00} .a-paid .dot{background:var(--paid)} .a-paid .badge{background:var(--paid);color:#3a2a00}
+  .a-tech .ribbon{background:var(--tech)} .a-tech .cat{color:var(--tech)} .a-tech .dot{background:var(--tech)} .a-tech .badge{background:var(--tech)}
+  .a-tools .ribbon{background:var(--tools)} .a-tools .cat{color:var(--tools)} .a-tools .dot{background:var(--tools)} .a-tools .badge{background:var(--tools)}
+  .a-geo .ribbon{background:var(--geo)} .a-geo .cat{color:var(--geo)} .a-geo .dot{background:var(--geo)} .a-geo .badge{background:var(--geo)}
+  .grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+  @media(max-width:760px){.grid2{grid-template-columns:1fr}}
+  .tcard{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--tools);border-radius:var(--radius);padding:18px 19px;box-shadow:var(--shadow);transition:.15s}
+  .tcard:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
+  .tcard .top{display:flex;align-items:center;gap:10px;margin-bottom:9px}
+  .tcard .ico{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;font-size:18px;background:color-mix(in srgb,var(--tools) 16%,var(--surface));flex:0 0 auto}
+  .tcard h3{font-family:var(--serif);font-size:18px;margin:0;line-height:1.2}
+  .tcard .pill{margin-left:auto;font-size:10px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;background:var(--tools);color:#fff;padding:3px 9px;border-radius:999px}
+  .tcard p{font-size:13.5px;color:var(--ink2);margin:0 0 10px}
+  .tcard .use{font-size:12.5px;background:var(--surface2);border:1px solid var(--line);border-radius:9px;padding:9px 11px;color:var(--ink2)}
+  .tcard .use b{color:var(--ink)}
+  .tcard .use a{color:var(--tech);font-weight:700}
+  .sec-ia .tcard{border-left-color:var(--ia)} .sec-ia .ico{background:color-mix(in srgb,var(--ia) 16%,var(--surface))} .sec-ia .pill{background:var(--ia)}
+  .sec-opt .tcard{border-left-color:var(--opt)} .sec-opt .ico{background:color-mix(in srgb,var(--opt) 16%,var(--surface))} .sec-opt .pill{background:var(--opt)}
+  .tags{display:flex;gap:7px;margin-top:11px;flex-wrap:wrap}
+  .tags .t{font-size:10.5px;font-weight:700;letter-spacing:.03em;padding:3px 9px;border-radius:7px;border:1px solid var(--line2);color:var(--ink2)}
+  .tags .t.hi{background:color-mix(in srgb,var(--opt) 18%,transparent);border-color:transparent;color:var(--opt)}
+  .tags .t.mid{background:color-mix(in srgb,var(--paid) 20%,transparent);border-color:transparent;color:#b97a00}
+  .tags .t.low{background:color-mix(in srgb,var(--tech) 16%,transparent);border-color:transparent;color:var(--tech)}
+  .metric{display:grid;grid-template-columns:.85fr 1.15fr;gap:0;border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow-lg)}
+  @media(max-width:760px){.metric{grid-template-columns:1fr}}
+  .metric .big{background:linear-gradient(150deg,var(--ia),#0a7d73);color:#fff;padding:30px 32px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
+  .metric .big::after{content:"";position:absolute;right:-50px;top:-50px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%)}
+  .metric .big .num{font-family:var(--serif);font-size:62px;font-weight:800;line-height:1;letter-spacing:-1px}
+  .metric .big .lab{font-size:15px;margin-top:10px;max-width:26ch;color:rgba(255,255,255,.95);position:relative}
+  .metric .big .trend{margin-top:16px;display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:800;background:rgba(255,255,255,.2);padding:6px 12px;border-radius:999px;width:fit-content}
+  .metric .bars{background:var(--surface);padding:24px 28px;display:flex;flex-direction:column;gap:16px;justify-content:center}
+  .metric .bar .br-top{display:flex;justify-content:space-between;gap:12px;font-size:13px;margin-bottom:7px;color:var(--ink2)}
+  .metric .bar .br-top b{color:var(--ink);font-weight:600}
+  .metric .bar .br-top .v{font-family:var(--serif);font-weight:800;color:var(--ink);flex:0 0 auto}
+  .metric .bar .track{height:9px;border-radius:6px;background:var(--surface2);border:1px solid var(--line);overflow:hidden}
+  .metric .bar .fill{height:100%;border-radius:6px;background:var(--tech)}
+  /* GRÁFICO DE LÍNEAS */
+  .chart{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px 24px 14px;box-shadow:var(--shadow)}
+  .chart .ch-head{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;flex-wrap:wrap;margin-bottom:6px}
+  .chart .ch-title{font-family:var(--serif);font-size:18px;font-weight:700;color:var(--ink)}
+  .chart .ch-sub{font-size:12.5px;color:var(--muted);margin-top:2px}
+  .chart .ch-src{font-size:11px;color:var(--muted);background:var(--surface2);border:1px solid var(--line);padding:4px 10px;border-radius:999px;white-space:nowrap}
+  .chart .ch-canvas{width:100%}
+  .chart svg{width:100%;height:auto;display:block}
+  .chart .gl{stroke:var(--line);stroke-width:1}
+  .chart .ln{fill:none;stroke:var(--ia);stroke-width:2.5;stroke-linejoin:round;stroke-linecap:round}
+  .chart .dot{fill:var(--surface);stroke:var(--ia);stroke-width:2.5}
+  .chart .vlab{fill:var(--ink);font-size:12px;font-weight:700;font-family:var(--serif)}
+  .chart .xlab{fill:var(--muted);font-size:11px}
+  /* SEO POR VERTICAL */
+  .vgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  @media(max-width:820px){.vgrid{grid-template-columns:1fr}}
+  .vert{background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--local);border-radius:var(--radius);padding:17px 18px;box-shadow:var(--shadow)}
+  .vert .vh{display:flex;align-items:center;gap:10px;margin-bottom:13px}
+  .vert .vh .vi{width:34px;height:34px;border-radius:9px;display:grid;place-items:center;font-size:17px;flex:0 0 auto}
+  .vert .vh h3{font-family:var(--serif);font-size:17px;margin:0;line-height:1}
+  .vert .vh .cnt{margin-left:auto;font-size:11px;font-weight:800;color:var(--muted);background:var(--surface2);border:1px solid var(--line);padding:2px 9px;border-radius:999px}
+  .vert ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:13px}
+  .vert li{position:relative;padding-left:15px}
+  .vert li::before{content:"";position:absolute;left:0;top:6px;width:7px;height:7px;border-radius:50%}
+  .vert .vt{font-size:13.5px;margin:0 0 3px;color:var(--ink);line-height:1.32;font-weight:600}
+  .vert .vsrc a{font-size:11px;color:var(--muted)}
+  .vert .vsrc a:hover{color:var(--tech)}
+  .vert .empty{font-size:13px;color:var(--muted);font-style:italic;padding:6px 0 4px}
+  .vert.v-local{border-top-color:var(--local)} .vert.v-local .vi{background:color-mix(in srgb,var(--local) 18%,var(--surface))} .vert.v-local li::before{background:var(--local)}
+  .vert.v-ecom{border-top-color:var(--ecom)} .vert.v-ecom .vi{background:color-mix(in srgb,var(--ecom) 18%,var(--surface))} .vert.v-ecom li::before{background:var(--ecom)}
+  .vert.v-intl{border-top-color:var(--intl)} .vert.v-intl .vi{background:color-mix(in srgb,var(--intl) 18%,var(--surface))} .vert.v-intl li::before{background:var(--intl)}
+  .agenda{position:relative;display:flex;flex-direction:column;gap:16px}
+  .ag-item{display:grid;grid-template-columns:60px 1fr;gap:18px;position:relative}
+  .ag-item::before{content:"";position:absolute;left:29px;top:60px;height:calc(100% - 44px);width:2px;background:var(--line2);z-index:0}
+  .ag-item:last-child::before{display:none}
+  .ag-date{position:relative;z-index:1;width:60px;height:60px;border-radius:15px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;box-shadow:var(--shadow);font-family:var(--serif)}
+  .ag-date .d{font-size:23px;font-weight:800;line-height:1}
+  .ag-date .m{font-size:11px;text-transform:uppercase;letter-spacing:.08em;opacity:.92;margin-top:1px}
+  .ag-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:14px 17px;box-shadow:var(--shadow);transition:.15s}
+  .ag-card:hover{transform:translateX(3px);box-shadow:var(--shadow-lg)}
+  .ag-card .ag-cat{font-size:10.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;margin-bottom:5px}
+  .ag-card h3{font-family:var(--serif);font-size:17px;margin:0 0 5px;line-height:1.25}
+  .ag-card p{font-size:13px;color:var(--ink2);margin:0}
+  .ag-item.a-algo .ag-date{background:var(--algo)} .ag-item.a-algo .ag-cat{color:var(--algo)}
+  .ag-item.a-ia .ag-date{background:var(--ia)} .ag-item.a-ia .ag-cat{color:var(--ia)}
+  .ag-item.a-paid .ag-date{background:var(--paid);color:#3a2a00} .ag-item.a-paid .ag-cat{color:#b97a00}
+  .ag-item.a-tech .ag-date{background:var(--tech)} .ag-item.a-tech .ag-cat{color:var(--tech)}
+  .ag-item.a-tools .ag-date{background:var(--tools)} .ag-item.a-tools .ag-cat{color:var(--tools)}
+  .ag-item.a-geo .ag-date{background:var(--geo)} .ag-item.a-geo .ag-cat{color:var(--geo)}
+  .tips{background:linear-gradient(135deg,color-mix(in srgb,var(--tech) 12%,var(--surface)),color-mix(in srgb,var(--tools) 10%,var(--surface)));border:1px solid var(--line);border-radius:18px;padding:24px 26px;box-shadow:var(--shadow)}
+  .tips ul{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:760px){.tips ul{grid-template-columns:1fr}}
+  .tips li{display:flex;gap:13px;font-size:14px;color:var(--ink2)}
+  .tips li .n{flex:0 0 30px;height:30px;border-radius:9px;background:var(--surface);border:1px solid var(--line);display:grid;place-items:center;font-weight:800;font-size:14px;color:var(--tools);font-family:var(--serif)}
+  .tips li b{color:var(--ink)}
+  .team{margin-top:22px;background:var(--panel);color:var(--on-panel);border-radius:18px;padding:24px 28px;box-shadow:var(--shadow-lg);position:relative;overflow:hidden}
+  .team::before{content:"";position:absolute;inset:0;background:radial-gradient(420px 200px at 90% 0%,rgba(124,92,255,.4),transparent 60%);pointer-events:none}
+  .team h3{font-family:var(--serif);font-size:21px;margin:0 0 14px;display:flex;align-items:center;gap:10px}
+  .team .items{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;position:relative}
+  @media(max-width:760px){.team .items{grid-template-columns:1fr}}
+  .team .it{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:15px 16px}
+  .team .it .num{font-family:var(--serif);font-size:13px;font-weight:800;color:var(--paid);letter-spacing:.1em}
+  .team .it p{margin:6px 0 0;font-size:13.5px;color:rgba(255,255,255,.92)}
+  .team .it p b{color:#fff}
+  footer{margin:46px 0 36px;padding-top:22px;border-top:3px solid var(--ink);color:var(--muted);font-size:12.5px}
+  footer .ft-top{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;align-items:center}
+  footer .srclist{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+  footer .srclist a{font-size:11.5px;background:var(--surface);border:1px solid var(--line);padding:5px 11px;border-radius:999px;color:var(--muted);font-weight:600}
+  footer .srclist a:hover{color:var(--tech);border-color:var(--tech)}
+  footer .archive-link{font-family:var(--serif);font-size:15px;font-weight:700;color:var(--ink2)}
+  footer .archive-link:hover{color:var(--tools)}
+</style>
+</head>
+<body>
+<div class="topstripe"></div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="mast-row">
+      <div class="wordmark">
+        <div class="mk">S</div>
+        <div>
+          <h1>SEO&nbsp;Daily</h1>
+          <span class="sub">El parte diario de búsqueda · IA · paid</span>
+        </div>
+      </div>
+      <div class="mast-meta">
+        <div class="date">viernes, 30 de octubre de 2026</div>
+        <div class="edi">Edición automática · 12:27 CET</div>
+      </div>
+    </div>
+    <nav class="catnav">
+      <a class="algo" href="#noticias">Algoritmo</a>
+      <a class="ia" href="#noticias">IA &amp; Búsqueda</a>
+      <a class="paid" href="#noticias">Paid / PPC</a>
+      <a class="tech" href="#noticias">SEO Técnico</a>
+      <a class="tools" href="#herramientas">Herramientas</a>
+      <a class="geo" href="#noticias">GEO</a>
+    </nav>
+    <div class="ticker">
+      <div class="lbl"><span class="pulse"></span>En portada</div>
+      <div class="track"><div class="move" id="tk">      <span>🔴 <b>Volatilidad "extrema" en el SERP:</b> Semrush Sensor marca 9,5/10 y Google no confirma ningún update</span>
+      <span>📈 <b>Alphabet sube un 25% en el Q3,</b> pero los anuncios de AI Mode monetizan peor que la búsqueda tradicional</span>
+      <span>🤖 <b>AI Mode suma 10 países</b> y estrena anuncios multiturno en Estados Unidos</span>
+      <span>💸 <b>Google ya paga a ~100 editores</b> por sus contenidos en IA, con pagos muy desiguales</span>
+      <span>🧠 <b>AI Overviews se rediseña</b> con tarjetas de fuente y "Quick results" desde el 15 de octubre</span></div></div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="hero">
+    <div class="feat">
+      <span class="tag">⚡ Lo más importante hoy</span>
+      <h3>La volatilidad del SERP se dispara día tras día hasta el 29 de octubre, sin que Google confirme ningún update</h3>
+      <p>El Semrush Sensor registró un 9,5/10 en escritorio de EE.&nbsp;UU. el 27 de octubre, su lectura más alta desde finales de septiembre y a la par del récord de marzo. Search Engine Roundtable documentó picos consecutivos los días 24, 27, 28 y 29 de octubre, con la intensidad creciendo jornada a jornada, mientras más de 15 herramientas de tracking confirman movimientos bruscos en el ranking sin que Google haya anunciado ningún core ni spam update.</p>
+    </div>
+    <div class="side">
+      <div class="lab">Por qué te importa</div>
+      <h4>Qué hacer si tu tráfico se mueve estos días</h4>
+      <ul>
+        <li>Compara el rango de fechas 24-29 de octubre en Search Console antes de sacar conclusiones: puede ser ruido, no un update con nombre.</li>
+        <li>No toques contenido ni enlaces a ciegas; Google insiste en que aplica ajustes menores de forma continua sin anunciarlos.</li>
+        <li>Revisa también el informe de IA en Search Console: parte del movimiento puede venir del rediseño de AI Overviews del 15 de octubre, no solo del ranking clásico.</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="kicker-h"><span class="em">📊</span><h2>El dato del día</h2></div>
+  <div class="metric">
+    <div class="big">
+      <span class="num">9,5/10</span>
+      <span class="lab">Lectura de volatilidad del Semrush Sensor en EE.&nbsp;UU. el 27 de octubre — la más alta desde septiembre</span>
+      <span class="trend">▲ iguala el récord de marzo de 2026</span>
+    </div>
+    <div class="bars">
+      <div class="bar"><div class="br-top"><b>AI Overviews en búsquedas (BrightEdge, feb 2026)</b><span class="v">48%</span></div><div class="track"><div class="fill" style="width:48%;background:var(--ia)"></div></div></div>
+      <div class="bar"><div class="br-top"><b>Crecimiento interanual de presencia de IA en el SERP</b><span class="v">58%</span></div><div class="track"><div class="fill" style="width:58%;background:var(--algo)"></div></div></div>
+      <div class="bar"><div class="br-top"><b>Boost de visibilidad citando fuentes externas (GEO, Princeton)</b><span class="v">40%</span></div><div class="track"><div class="fill" style="width:40%;background:var(--geo)"></div></div></div>
+      <div class="bar"><div class="br-top"><b>CTR de Perplexity con tarjetas de fuente</b><span class="v">18-22%</span></div><div class="track"><div class="fill" style="width:20%;background:var(--tools)"></div></div></div>
+    </div>
+  </div>
+
+  <div class="kicker-h"><span class="em">📈</span><h2>Tendencia del sector</h2></div>
+  <div class="chart">
+    <div class="ch-head">
+      <div><div class="ch-title">Presencia de AI Overviews en las SERP</div><div class="ch-sub">% de keywords con AIO · BrightEdge Generative Parser, 9 sectores</div></div>
+      <div class="ch-src">Fuente: BrightEdge</div>
+    </div>
+    <div id="linechart" class="ch-canvas"></div>
+  </div>
+
+  <div class="kicker-h" id="noticias"><span class="em">📰</span><h2>Titulares de hoy</h2></div>
+  <div class="grid3">
+    <article class="post a-algo">
+      <div class="ribbon"></div>
+      <div class="body">
+        <div class="cat"><span class="dot"></span>ALGORITMO GOOGLE <span class="badge">9,5/10</span></div>
+        <h3>El Semrush Sensor marca 9,5/10 de volatilidad e iguala el récord de marzo</h3>
+        <p>El sensor de escritorio en EE.&nbsp;UU. tocó el 27 de octubre su lectura más alta desde finales de septiembre, a la par de la actualización más volátil del año. Google no ha confirmado ningún core ni spam update, y más de 15 herramientas de tracking coinciden en el pico.</p>
+        <div class="src">Fuente: <a href="https://wildcatdigital.co.uk/blog/record-breaking-search-engine-volatility-continues/" target="_blank" rel="noopener">Wildcat Digital</a></div>
+      </div>
+    </article>
+    <article class="post a-algo">
+      <div class="ribbon"></div>
+      <div class="body">
+        <div class="cat"><span class="dot"></span>ALGORITMO GOOGLE <span class="badge">26 oct</span></div>
+        <h3>Google amplía su guía anti-spam para contenido compartido por enlace (UGC)</h3>
+        <p>La actualización, publicada el 26 de octubre, añade recomendaciones para bloquear la indexación de contenido generado por usuarios compartido por enlace y para vigilar el abuso desde Search Console, en línea con el refuerzo de las políticas de spam de este año.</p>
+        <div class="src">Fuente: <a href="https://developers.google.com/search/updates?hl=en" target="_blank" rel="noopener">Google Search Central</a></div>
+      </div>
+    </article>
+    <article class="post a-ia">
+      <div class="ribbon"></div>
+      <div class="body">
+        <div class="cat"><span class="dot"></span>IA &amp; BÚSQUEDA <span class="badge">15 oct</span></div>
+        <h3>Google rediseña AI Overviews y AI Mode con tarjetas de fuente y "Quick results"</h3>
+        <p>Desde el 15 de octubre, los resúmenes de IA muestran tarjetas de origen con más visibilidad y una capa de "Quick results", parte de una ola de rediseños que en el último mes también ha tocado a ChatGPT y Perplexity.</p>
+        <div class="src">Fuente: <a href="https://www.similarweb.com/blog/insights/ai-news/ai-search-news-update/" target="_blank" rel="noopener">Similarweb</a></div>
+      </div>
+    </article>
+    <article class="post a-paid">
+      <div class="ribbon"></div>
+      <div class="body">
+        <div class="cat"><span class="dot"></span>PAID / PPC <span class="badge">Dato</span></div>
+        <h3>Google admite que los anuncios de AI Mode monetizan peor que la búsqueda tradicional</h3>
+        <p>En la presentación de resultados del Q3, Philipp Schindler reconoció que cada consulta en AI Mode genera menos ingresos que una búsqueda clásica, aunque confía en mejorar la monetización a medida que crece el formato multiturno.</p>
+        <div class="src">Fuente: <a href="https://www.seroundtable.com/google-ai-mode-ads-earn-less-42417.html" target="_blank" rel="noopener">Search Engine Roundtable</a></div>
+      </div>
+    </article>
+    <article class="post a-paid">
+      <div class="ribbon"></div>
+      <div class="body">
+        <div class="cat"><span class="dot"></span>PAID / PPC</div>
+        <h3>Google Ads lanza en todo el mundo la priorización de canal y el control de presupuesto en PMax</h3>
+        <p>La función, ya global, da a los anunciantes control directo sobre qué tipo de campaña recibe presupuesto primero, y llega junto a la expansión de Smart Bidding Exploration a Performance Max y Shopping.</p>
+        <div class="src">Fuente: <a href="https://ppcnewsfeed.com/google-ads-updates/2026-10/" target="_blank" rel="noopener">PPC News Feed</a></div>
+      </div>
+    </article>
+    <article class="post a-tech">
+      <div class="ribbon"></div>
+      <div class="body">
+        <div class="cat"><span class="dot"></span>SEO TÉCNICO <span class="badge">72%</span></div>
+        <h3>INP sigue siendo la Core Web Vital que más cuesta aprobar</h3>
+        <p>Con un 72% de aprobación, la responsividad medida por INP continúa siendo la métrica más difícil de dominar en 2026, por delante de LCP y CLS, al exigir entender el bucle de eventos y las tareas largas del hilo principal.</p>
+        <div class="src">Fuente: <a href="https://webvitals.tools/blog/google-core-web-vitals-update-2026/" target="_blank" rel="noopener">WebVitals.tools</a></div>
+      </div>
+    </article>
+    <article class="post a-tools">
+      <div class="ribbon"></div>
+      <div class="body">
+        <div class="cat"><span class="dot"></span>HERRAMIENTAS</div>
+        <h3>Screaming Frog integra la API v3 de Ahrefs para todos los planes de pago</h3>
+        <p>La actualización añade la nueva API de Ahrefs sin necesidad de plan enterprise, además de embeddings de similitud semántica para sugerir redirecciones por contenido y no solo por patrón de URL.</p>
+        <div class="src">Fuente: <a href="https://www.screamingfrog.co.uk/blog/seo-spider-23/" target="_blank" rel="noopener">Screaming Frog</a></div>
+      </div>
+    </article>
+    <article class="post a-geo">
+      <div class="ribbon"></div>
+      <div class="body">
+        <div class="cat"><span class="dot"></span>GEO <span class="badge">+40%</span></div>
+        <h3>El estudio de Princeton sobre GEO cuantifica qué tácticas elevan la visibilidad en motores generativos</h3>
+        <p>Citar fuentes externas, añadir estadísticas y citas directas puede elevar la visibilidad en respuestas de motores generativos hasta un 40%, con el mayor beneficio para los sitios peor posicionados: los que ocupan la quinta posición ganan un 115% de visibilidad.</p>
+        <div class="src">Fuente: <a href="https://searchengineland.com/generative-engine-optimization-framework-introduced-research-paper-435855" target="_blank" rel="noopener">Search Engine Land</a></div>
+      </div>
+    </article>
+  </div>
+
+  <div class="kicker-h"><span class="em">🎯</span><h2>SEO por vertical</h2></div>
+  <div class="vgrid">
+    <div class="vert v-local">
+      <div class="vh"><div class="vi">🏪</div><h3>SEO Local</h3><span class="cnt">2</span></div>
+      <ul>
+        <li><p class="vt">El Local Pack capta el 44% de los clics en búsquedas locales, por delante de lo orgánico (29%) y los anuncios (19%)</p><span class="vsrc"><a href="https://birdeye.com/blog/google-local-pack/" target="_blank" rel="noopener">Birdeye</a></span></li>
+        <li><p class="vt">Google Business Profile añade un desglose de impresiones por superficie: panel clásico, resumen IA de Maps y AI Overviews</p><span class="vsrc"><a href="https://www.digitalapplied.com/blog/google-business-profile-guide-every-feature-2026" target="_blank" rel="noopener">Digital Applied</a></span></li>
+      </ul>
+    </div>
+    <div class="vert v-ecom">
+      <div class="vh"><div class="vi">🛒</div><h3>E-commerce</h3><span class="cnt">2</span></div>
+      <ul>
+        <li><p class="vt">NIQ y Google anuncian una alianza para sumar un catálogo de 250M de productos al Shopping Graph y mejorar los agentes de compra con IA</p><span class="vsrc"><a href="https://nielseniq.com/global/en/news-center/2026/niq-and-google-partner-to-advance-agentic-commerce/" target="_blank" rel="noopener">NielsenIQ</a></span></li>
+        <li><p class="vt">Google unifica el schema Product con el feed de Merchant Center: feed, ficha y datos estructurados deben describir el mismo producto</p><span class="vsrc"><a href="https://claritydigital.agency/blog/google-merchant-center-product-feed-seo-ai-shopping" target="_blank" rel="noopener">Clarity Digital</a></span></li>
+      </ul>
+    </div>
+    <div class="vert v-intl">
+      <div class="vh"><div class="vi">🌍</div><h3>SEO Internacional</h3><span class="cnt">2</span></div>
+      <ul>
+        <li><p class="vt">Entre el 60% y el 80% de los fallos de SEO multipaís vienen de errores de hreflang, sobre todo confundir país con idioma</p><span class="vsrc"><a href="https://www.searchmaxxed.com/research/international-seo-checklist" target="_blank" rel="noopener">Searchmaxxed</a></span></li>
+        <li><p class="vt">La prioridad en 2026 es la localización, no la traducción: la intención de búsqueda cambia por país aunque el idioma sea el mismo</p><span class="vsrc"><a href="https://www.digitalapplied.com/blog/international-seo-hreflang-multilingual-guide" target="_blank" rel="noopener">Digital Applied</a></span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="kicker-h"><span class="em">🗓️</span><h2>En el radar · próximos cambios con fecha</h2></div>
+  <div class="agenda">
+    <div class="ag-item a-paid">
+      <div class="ag-date"><span class="d">27</span><span class="m">nov</span></div>
+      <div class="ag-card">
+        <div class="ag-cat">PAID / PPC</div>
+        <h3>Black Friday: pico de campañas de Shopping y PMax</h3>
+        <p>Arranca la temporada alta de ecommerce; feeds, schema de producto y pujas automáticas deben estar cerrados antes de esta fecha.</p>
+      </div>
+    </div>
+    <div class="ag-item a-paid">
+      <div class="ag-date"><span class="d">30</span><span class="m">nov</span></div>
+      <div class="ag-card">
+        <div class="ag-cat">PAID / PPC</div>
+        <h3>Cyber Monday cierra el fin de semana de mayor gasto del año</h3>
+        <p>Último gran pico de demanda antes de las campañas de Navidad; conviene revisar presupuestos y exclusiones en PMax.</p>
+      </div>
+    </div>
+    <div class="ag-item a-paid">
+      <div class="ag-date"><span class="d">5</span><span class="m">ene</span></div>
+      <div class="ag-card">
+        <div class="ag-cat">E-COMMERCE</div>
+        <h3>Fin de la ventana de "Deal Ends" en Google Shopping</h3>
+        <p>Hasta esta fecha, los productos deben mantener su precio mínimo efectivo de los últimos 60 días para optar a la insignia de oferta en Shopping.</p>
+      </div>
+    </div>
+    <div class="ag-item a-tech">
+      <div class="ag-date"><span class="d">31</span><span class="m">ene</span></div>
+      <div class="ag-card">
+        <div class="ag-cat">SEO TÉCNICO</div>
+        <h3>Deadline de Merchant Center: resolución mínima de imagen de 500×500 px</h3>
+        <p>Google empezará a exigir esta resolución mínima en las imágenes de producto; por debajo de ella, las fichas dejan de ser aptas para listados.</p>
+      </div>
+    </div>
+    <div class="ag-item a-paid">
+      <div class="ag-date"><span class="d">~1</span><span class="m">feb</span></div>
+      <div class="ag-card">
+        <div class="ag-cat">PAID / PPC</div>
+        <h3>Migración automática de Dynamic Search Ads a AI Max</h3>
+        <p>Las campañas DSA que no se hayan migrado manualmente antes de esta fecha pasarán automáticamente a AI Max o a campañas de Búsqueda con IA.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="kicker-h" id="herramientas"><span class="em">🛠️</span><h2>Stack &amp; herramientas recomendadas</h2></div>
+  <div class="grid2 sec-tools">
+    <article class="tcard">
+      <div class="top"><div class="ico">🐸</div><h3>Screaming Frog SEO Spider</h3><span class="pill">Crawling</span></div>
+      <p>El crawler de referencia añade integración con la API v3 de Ahrefs para cualquier plan de pago y usa embeddings semánticos para proponer redirecciones por similitud de contenido.</p>
+      <div class="use"><b>Caso de uso:</b> mapear redirecciones en una migración por similitud de contenido, no solo por coincidencia de URL. <a href="https://www.screamingfrog.co.uk/blog/seo-spider-23/" target="_blank" rel="noopener">Más info →</a></div>
+    </article>
+    <article class="tcard">
+      <div class="top"><div class="ico">🔌</div><h3>MCP de Ahrefs / Semrush</h3><span class="pill">IA + datos</span></div>
+      <p>Ambas plataformas ofrecen ya un servidor MCP alojado que conecta sus datos de keywords y backlinks directamente a Claude u otros asistentes de IA.</p>
+      <div class="use"><b>Caso de uso:</b> pedir en una conversación que agrupe keywords, detecte canibalización y priorice oportunidades sin exportar un solo CSV. <a href="https://drewgarrett.org/blog/seo-tools/semrush-vs-ahrefs" target="_blank" rel="noopener">Más info →</a></div>
+    </article>
+    <article class="tcard">
+      <div class="top"><div class="ico">📡</div><h3>Nightwatch</h3><span class="pill">Volatilidad</span></div>
+      <p>Herramienta de seguimiento de SERP pensada para detectar, medir y responder a oleadas de volatilidad como la de esta semana.</p>
+      <div class="use"><b>Caso de uso:</b> cruzar sus alertas con el Semrush Sensor para confirmar si una caída de tráfico es un update real o ruido puntual. <a href="https://nightwatch.io/blog/serp-volatility-tracking/" target="_blank" rel="noopener">Más info →</a></div>
+    </article>
+    <article class="tcard">
+      <div class="top"><div class="ico">🧭</div><h3>Semrush AI Visibility / Writesonic</h3><span class="pill">GEO</span></div>
+      <p>Plataformas como Semrush, Adobe o Writesonic ya integran paneles de seguimiento de citas y share of voice en ChatGPT, Gemini y Perplexity.</p>
+      <div class="use"><b>Caso de uso:</b> monitorizar qué páginas te citan los motores generativos y detectar huecos frente a competidores. <a href="https://llmpulse.ai/blog/geo-guide/" target="_blank" rel="noopener">Más info →</a></div>
+    </article>
+  </div>
+
+  <div class="kicker-h"><span class="em">🤖</span><h2>IA aplicada al SEO · ideas e integraciones</h2></div>
+  <div class="grid2 sec-ia">
+    <article class="tcard">
+      <div class="top"><div class="ico">🧩</div><h3>Canibalización de keywords vía MCP</h3><span class="pill">Automatización</span></div>
+      <p>Conecta el MCP de Ahrefs o Semrush a Claude para que cruce tus clusters de keywords con el ranking actual en segundos.</p>
+      <div class="use"><b>Cómo aplicarlo:</b> antes de cada sprint, pide un listado de URLs que compiten entre sí por la misma intención y decide qué consolidar.</div>
+    </article>
+    <article class="tcard">
+      <div class="top"><div class="ico">🚨</div><h3>Alertas sobre tráfico de AI Overviews</h3><span class="pill">Monitorización</span></div>
+      <p>El nuevo desglose de impresiones por superficie en Search Console permite aislar qué parte de una caída viene de AI Overviews o AI Mode.</p>
+      <div class="use"><b>Cómo aplicarlo:</b> crea una alerta automática que avise si la cuota de impresiones vía IA cae por debajo de un umbral en tus páginas clave.</div>
+    </article>
+    <article class="tcard">
+      <div class="top"><div class="ico">📚</div><h3>Checklist GEO basado en el paper de Princeton</h3><span class="pill">GEO</span></div>
+      <p>La investigación de Princeton cuantifica qué tácticas de redacción elevan la visibilidad en motores generativos y en cuánto.</p>
+      <div class="use"><b>Cómo aplicarlo:</b> añade citas externas, estadísticas y una respuesta directa en el primer párrafo de las páginas con más impresiones en IA.</div>
+    </article>
+    <article class="tcard">
+      <div class="top"><div class="ico">🖼️</div><h3>Redirecciones por similitud semántica</h3><span class="pill">Migraciones</span></div>
+      <p>Screaming Frog ya sugiere mapeos de redirección comparando el significado del contenido, no solo la URL.</p>
+      <div class="use"><b>Cómo aplicarlo:</b> úsalo como primera pasada en cualquier migración y revisa manualmente solo los casos de baja confianza.</div>
+    </article>
+  </div>
+
+  <div class="kicker-h"><span class="em">⚡</span><h2>Quick wins · ideas de optimización</h2></div>
+  <div class="grid2 sec-opt">
+    <article class="tcard">
+      <div class="top"><div class="ico">🛡️</div><h3>Revisar el bloqueo de contenido UGC compartido por enlace</h3></div>
+      <p>Tras la guía anti-spam del 26 de octubre, comprueba que el contenido generado por usuarios y compartido por enlace no sea indexable si no aporta valor.</p>
+      <div class="tags"><span class="t hi">Impacto alto</span><span class="t low">Esfuerzo bajo</span></div>
+    </article>
+    <article class="tcard">
+      <div class="top"><div class="ico">🏷️</div><h3>Auditar el schema Product antes del pico de Black Friday</h3></div>
+      <p>Asegura que cada ficha con tráfico tiene name, image, offers y un price con priceCurrency válido, alineado con el feed de Merchant Center.</p>
+      <div class="tags"><span class="t hi">Impacto alto</span><span class="t mid">Esfuerzo medio</span></div>
+    </article>
+    <article class="tcard">
+      <div class="top"><div class="ico">🌍</div><h3>Revisar hreflang: país vs. idioma</h3></div>
+      <p>Comprueba que no confundes código de país con idioma (de-DE solo apunta a Alemania) y que existen x-default y auto-referencia.</p>
+      <div class="tags"><span class="t mid">Impacto medio</span><span class="t low">Esfuerzo bajo</span></div>
+    </article>
+    <article class="tcard">
+      <div class="top"><div class="ico">⚡</div><h3>Reducir interacciones largas para mejorar INP</h3></div>
+      <p>Con solo un 72% de aprobación, INP sigue siendo la Core Web Vital más floja; prioriza las páginas con más tráfico e interacción.</p>
+      <div class="tags"><span class="t mid">Impacto medio</span><span class="t mid">Esfuerzo medio</span></div>
+    </article>
+  </div>
+
+  <div class="kicker-h"><span class="em">💡</span><h2>Consejos del día</h2></div>
+  <div class="tips">
+    <ul>
+      <li><span class="n">1</span><div><b>No reacciones en caliente a la volatilidad de esta semana.</b> Compara el rango de fechas en Search Console antes de tocar nada.</div></li>
+      <li><span class="n">2</span><div><b>Separa caídas "clásicas" de caídas por IA.</b> Usa el nuevo desglose de impresiones por superficie en Search Console.</div></li>
+      <li><span class="n">3</span><div><b>Cierra ya el feed de Merchant Center.</b> Antes del pico de Black Friday/Cyber Monday, feed y schema deben decir lo mismo.</div></li>
+      <li><span class="n">4</span><div><b>No confundas idioma con país en hreflang.</b> Es el error que más fallos de SEO multipaís provoca.</div></li>
+      <li><span class="n">5</span><div><b>Planifica ya la migración de Dynamic Search Ads.</b> Hazlo manualmente antes de febrero para controlar tú el proceso.</div></li>
+    </ul>
+  </div>
+
+  <div class="team">
+    <h3>📌 Para el equipo · acción de la semana</h3>
+    <div class="items">
+      <div class="it"><div class="num">01</div><p><b>Auditar el impacto real de la volatilidad 24-29 oct.</b> Compara GSC antes de reportar nada a los clientes más expuestos.</p></div>
+      <div class="it"><div class="num">02</div><p><b>Preparar los feeds de Merchant Center para Black Friday/Cyber Monday.</b> Revisa schema, precios y stock antes del 27 de noviembre.</p></div>
+      <div class="it"><div class="num">03</div><p><b>Documentar qué páginas citan los motores de IA.</b> Usa el desglose de Search Console como base del reporting GEO del mes.</p></div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="ft-top">
+      <div>📰 <b>SEO Daily</b> — informe generado automáticamente cada mañana. Las cifras y afirmaciones provienen de las fuentes enlazadas; <b>verifica siempre</b> antes de tomar decisiones críticas.</div>
+      <a class="archive-link" href="archive/index.html">🗂️ Hemeroteca →</a>
+    </div>
+    <div class="srclist">
+      <a href="https://searchengineland.com/" target="_blank" rel="noopener">Search Engine Land</a>
+      <a href="https://www.seroundtable.com/" target="_blank" rel="noopener">Search Engine Roundtable</a>
+      <a href="https://ppc.land/" target="_blank" rel="noopener">PPC Land</a>
+      <a href="https://developers.google.com/search/blog" target="_blank" rel="noopener">Google Search Central</a>
+      <a href="https://www.screamingfrog.co.uk/" target="_blank" rel="noopener">Screaming Frog</a>
+      <a href="https://birdeye.com/" target="_blank" rel="noopener">Birdeye</a>
+      <a href="https://www.searchmaxxed.com/" target="_blank" rel="noopener">Searchmaxxed</a>
+      <a href="https://nielseniq.com/" target="_blank" rel="noopener">NielsenIQ</a>
+    </div>
+  </footer>
+
+</main>
+<script>(function(){var m=document.getElementById('tk');if(m){m.innerHTML+=m.innerHTML;}})();</script>
+<script>
+(function(){
+  var data; try { data = [["feb '25",30],["feb '26",48]]; } catch(e){ data = []; }
+  var unit = "%";
+  var host = document.getElementById('linechart');
+  if(!host) return;
+  if(!Array.isArray(data) || data.length < 2){ host.innerHTML = '<div style="color:var(--muted);font-size:13px;padding:12px 0">Hoy no hay una serie de datos verificable que graficar.</div>'; return; }
+  var W=760,H=270,PL=18,PR=24,PT=26,PB=34;
+  var vals = data.map(function(d){return +d[1]});
+  var max = Math.max.apply(null,vals), min = Math.min.apply(null,vals);
+  var sp = (max-min) || (max||1);
+  var top = max + sp*0.18, bot = Math.max(0, min - sp*0.18), rng = (top-bot)||1, n = data.length;
+  function X(i){ return PL + (W-PL-PR)*(n===1?0.5:i/(n-1)); }
+  function Y(v){ return PT + (H-PT-PB)*(1-(v-bot)/rng); }
+  var s='';
+  for(var g=0;g<=3;g++){ var gy=(PT+(H-PT-PB)*g/3).toFixed(1); s+='<line class="gl" x1="'+PL+'" y1="'+gy+'" x2="'+(W-PR)+'" y2="'+gy+'"/>'; }
+  var line = data.map(function(d,i){return X(i).toFixed(1)+','+Y(d[1]).toFixed(1)}).join(' ');
+  var area = line+' '+(W-PR)+','+(H-PB)+' '+PL+','+(H-PB);
+  s+='<defs><linearGradient id="ag" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="var(--ia)" stop-opacity="0.28"/><stop offset="100%" stop-color="var(--ia)" stop-opacity="0"/></linearGradient></defs>';
+  s+='<polygon points="'+area+'" fill="url(#ag)"/>';
+  s+='<polyline class="ln" points="'+line+'"/>';
+  data.forEach(function(d,i){ var cx=X(i).toFixed(1), cy=Y(d[1]); s+='<circle class="dot" cx="'+cx+'" cy="'+cy.toFixed(1)+'" r="4.5"/>'; s+='<text class="vlab" x="'+cx+'" y="'+(cy-11).toFixed(1)+'" text-anchor="middle">'+d[1]+unit+'</text>'; s+='<text class="xlab" x="'+cx+'" y="'+(H-12)+'" text-anchor="middle">'+d[0]+'</text>'; });
+  host.innerHTML='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Gráfico de líneas">'+s+'</svg>';
+})();
+</script>
+</body>
+</html>
